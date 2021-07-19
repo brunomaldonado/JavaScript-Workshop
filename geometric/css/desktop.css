@@ -17,7 +17,8 @@
 .nav-logo--container{
   position: relative;
   left: calc(10% - 50px);
-  bottom: 16px;
+  margin-bottom: 35px;
+
   text-decoration: none;
 }
 
