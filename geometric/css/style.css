@@ -42,6 +42,7 @@ html {
 .nav-logo--container{
   position: relative;
   left: calc(50% - 50px);
+  top: 1px;
   text-decoration: none;
 }
 
