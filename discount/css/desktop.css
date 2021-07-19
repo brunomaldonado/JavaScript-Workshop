@@ -1,0 +1,77 @@
+.container-nav-menu {
+  background: linear-gradient(25deg, #4b2d7c, #0da7ef7c);
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 10px;
+  margin-top: 10px;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo--container {
+  position: relative;
+  left: calc(10% - 50px);
+  text-decoration: none;
+  /* bottom: 13px; */
+}
+
+.logo-text {
+  font-size: 10rem;
+  font-family: "vorname";
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-logo--container label a{
+  text-decoration: none;
+  color: whitesmoke
+}
+
+.btn-menu img {
+  display: none;
+}
+
+.nav-items {
+  position: relative;
+  top: 0;
+  float: right;
+  text-align: right;
+  height: 23px;
+  background: none;
+  transition: none;
+}
+
+.nav-items li {
+  display: inline-block;
+  opacity: 1;
+  margin: 0 20px;
+  text-decoration: none;
+}
+
+.nav-items li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.nav-items li a:active,
+.nav-items li a:hover {
+  color: rgb(239, 241, 243)
+}
+
+.header--title-container {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.header--title-container h1 {
+  font-size: 2.6rem;
+}
+
+.header--title-container p {
+  font-size: 2.1rem;
+  margin: 20px 0px 30px 0px;
+  font-weight: 700;
+}

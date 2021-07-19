@@ -1,0 +1,222 @@
+/* 
+1. Posicionamiento
+2. Modelo de caja (Box Model) -- margin, padding --
+3. Tipografia (position)
+4. Visuales (Shadow box, border radius)
+5. Miscelanios o otros
+Project Mobile First.......
+Software Developer Bruno Maldonado Rigoberto 
+Contact brunoutl@gmail.com
+*/
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --black: #282623;
+  --just-white: #FFFFFF;
+}
+
+html{
+  background-color: rgb(134, 134, 177);
+  background-image: url(../images/0008.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 62.5%;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+
+@font-face {
+  font-family: "designer";
+  src: url("../fonts/designer/DESIGNER.otf") format('truetype');
+}
+
+@font-face {
+  font-family: "vorname";
+  src: url("../fonts/vorname/Vorname.otf") format('truetype');
+}
+
+ .container-nav-menu{
+  /* background-color: rgb(94, 93, 86); */
+  background: linear-gradient(25deg, #e2e9cb, #b3cbd6);
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.nav-logo--container{
+  position: relative;
+  left: calc(50% - 50px);
+  text-decoration: none;
+}
+
+.nav-logo--container label a{
+  text-decoration: none;
+  color: var(--black);
+}
+
+.logo-text{
+  font-size: 8rem;
+  font-family: "vorname";
+  text-decoration: none;
+  color: var(--just-white);
+  text-decoration: none;
+}
+
+.nav-items{
+  position: fixed;
+  width: 100%;
+  height: 0vh;
+  top: 50px;
+  background: #2f3640;
+  /* opacity: .9; */
+  float: right;
+  text-align: center;
+  transition: all .5s;
+  list-style-type: none;
+  text-decoration-style: none;
+}
+
+.nav-items li{
+  opacity: 0;
+  line-height: 30px;
+  margin: 50px 0;
+  transition: all .5s;
+}
+
+.nav-items li a{
+  color: var(--just-white);
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.nav-items li a:active, .nav-items li a:hover{
+  color: #1656df;
+  transition: 0.5s;
+}
+
+.btn-menu img{
+  display: block;
+  margin-right: 20px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  float: right;
+  width: 30px;
+  height: 30px;
+  position: relative;
+} 
+
+#check{
+  display: none;
+}
+
+#check:checked ~ .nav-items{
+  height: 100vh;
+}
+
+#check:checked ~ .nav-items li{
+  opacity: .9;
+}
+
+main{
+  height: 100vh;
+}
+
+.main-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.main-container--card{
+  width: 90%;
+  min-width: 288px;
+  max-width: 400px;
+  min-height: 152px;
+  margin: 15px auto;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.61);
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.main-container--card .card-icon {
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main-container--icons{
+  display: flex;
+  flex-direction: row;
+  float: right;
+  gap: 5px;
+}
+
+.main-container--card .triangle {
+  background-image: url(../assets/triangleone.svg);
+}
+.main-container--card .square {
+  background-image: url(../assets/cubo.svg);
+}
+.main-container--card .circle {
+  background-image: url(../assets/dragoncircle.svg);
+}
+.main-container--card .discount {
+  background-image: url(../assets/discount.png);
+}
+.main-container--card .histogram {
+  background-image: url(../assets/histogram.png);
+}
+
+.container--card-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.8rem;
+  color: #3b3b39;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.container--card-body {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: #808080;
+}
+
+.main-container--card .container--card-button{
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  margin-top: 15px;
+}
+
+.main-container--card .container--card-button a{
+  font-weight: bold;
+  text-decoration: none;
+  color: #282623;
+}
+
+.end-page__footer p{
+   text-align: center;
+   font-size: 1.8rem;
+   padding: 10px;
+}
+

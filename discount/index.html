@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <title>Discounted Products</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 768px)">
+  <link rel="stylesheet" href="./css/desktop.css" media="(min-width: 1024px)">
+</head>
+
+<body>
+
+  <div class="container-nav-menu">
+    <div class="nav-logo--container">
+      <img src="" alt="">
+      <label class="logo-text"><a href="../index.html">BM</a></label>
+    </div>
+    <ul class="nav-items">
+      <li><a class="acrive" href="../index.html">Home</a></li>
+      <li><a href="../geometric/index.html">Workshop #1</a></li>
+      <li><a href="#">Workshop #2</a></li>
+      <li><a href="">Workshop #3</a></li>
+    </ul>
+    <div id="menuBtn" class="btn-menu">
+      <img id="menu" src="./assets/bars-solid.svg" alt="">
+    </div>
+  </div>
+
+
+  <header class="header--title-container">
+    <h1>Calcular el descuento de un producto a adquirir</h1>
+    <p>Second Practical course workshop</p>
+  </header>
+
+  <main>
+    <div class="main-container--contents">
+      <div id="product-content" class="main-products">
+        <h2>Calcula el precio a pagar de tus productos con descuento</h2>
+        <div class="main-products__container">
+          <img src="./assets/shoppingcart.png" alt="shoppingcart">
+          <form action="#" id="form-container" class="form-container">
+            <div class="inputBox">
+              <input id="inputPrice" type="number" required="required">
+              <span>Precio:</span>
+            </div>
+            <div class="inputBox">
+              <input id="inputDiscount" type="number" required="required">
+              <span>Descuento:</span>
+            </div>
+            <div class="form-container__buttons">
+              <button class="buttonBox" type="button" onclick="buttonCalculateDiscountPrice()">Calcular</button>
+              <button class="buttonBox" id="cleanBox" type="button">clear</button>
+            </div>
+            <div id="totalPrice" class="totalPrice">
+              <span>Con descuento son:</span>
+              <p id="totalToPay"></p>
+            </div>
+            <button class="buttonCoupons" type="button" onclick="btnCouponsProducts()">Cupones especiales</button>
+          </form>
+        </div>
+      </div>
+
+      <div id="product-content1" class="main-products">
+        <h2>Calcula el precio a pagar del producto con cupones especiales</h2>
+        <div class="main-products__container">
+          <form action="#" id="form-container" class="form-container">
+            <div class="inputBox">
+              <input id="couponsInputPrice" type="number" required="required">
+              <span>Precio:</span>
+            </div>
+            <div class="inputBox">
+              <input id="couponsInputDiscount" type="number" required="required">
+              <span>Descuento:</span>
+            </div>
+            <div class="form-container__coupons">
+              <label for="selectCoupons">Cupones:</label>
+              <select name="selectCoupons" name="selectCoupons" id="selectCoupons">
+                <option value="0">------</option>
+                <option value="10">-10%</option>
+                <option value="25">-25%</option>
+                <option value="50">-50%</option>
+              </select>
+            </div>
+            <div class="form-container__buttons">
+              <button class="buttonBox" type="button" onclick="buttonCalculateDiscountCoupons()">Calculate</button>
+              <button class="buttonBox" id="cleanContent" type="button">clear</button>
+            </div>
+          </form>
+        </div>
+        <section id="form-container" class="card-container-product">
+          <article class="card-container-product__item">
+            <div class="card-container-product__item--p1">
+              <h4 class="card-container-product__item--title">Poduct</h4>
+              <h4 id="percentDiscount">-00%</h4>
+            </div>
+            <div class="card-container-product__item--container-image">
+              <figure><img src="./assets/smartwacth.png" alt=""></figure>
+            </div>
+            <div class="card-container-product__item--p2">
+              <h4 id="originalPrice" style="text-decoration:line-through">$0000</h4>
+              <h4 id="priceDiscount">$0000</h4>
+            </div>
+          </article>
+          <p id="youSaveTheAmountOf"></p>
+        </section>
+        <span id="close" class="close" onclick="close()"></span>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>Copyright © 2021. <strong style="color:rgb(22, 23, 26)">Bruno Maldonado. </strong>All rights reserved.</p>
+  </footer>
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

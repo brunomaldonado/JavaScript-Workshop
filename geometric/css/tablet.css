@@ -1,0 +1,173 @@
+.container-nav-menu{
+  /* background-color: rgb(94, 93, 86); */
+  background: linear-gradient(25deg, #4b2d7c, #0da7ef7c);
+  height: 75px;
+  width: 100%;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.nav-logo--container{
+  position: relative;
+  left: calc(50% - 50px);
+  text-decoration: none;
+}
+
+.logo-text{
+  font-size: 9rem;
+  font-family: "vorname";
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-logo--container label a{
+  text-decoration: none;
+  color: whitesmoke
+}
+
+.nav-items{
+  position: fixed;
+  width: 100%;
+  height: 0vh;
+  top: 75px;
+  background: #2f3640;
+  /* opacity: .9; */
+  float: right;
+  text-align: center;
+  transition: all .5s;
+  list-style-type: none;
+  text-decoration-style: none;
+}
+
+.title-header h1 {
+  font-size: 1.6rem;
+  /* color: aqua; */
+}
+
+.title-header h2 {
+  font-size: 1.4rem;
+}
+
+.opcionMenu {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.opcionMenu button{
+  margin-top: 10px;
+  font-size: 1rem;
+
+}
+
+.main{
+  display: flex;
+}
+
+/* .main-contents{
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+} */
+
+.main-container{
+  max-width: 400px;
+}
+.main-container h3 {
+  padding: 3px;
+  font-size: 1.4rem
+}
+
+label{
+  font-size: 1.4rem
+}
+
+input[type="number"] {
+  border: 2px solid rgb(231, 223, 207);
+  border-radius: 10px;
+  outline: none;
+  background-color: inherit;
+  color: rgb(14, 14, 14);
+  font-size: 1.5rem;
+  padding: 3px;
+  transition: 0.3s;
+  text-align: center;
+  margin-bottom: 13px;
+}
+
+.card-box input {
+  margin-top: 10px;
+  width: 110px;
+  padding: 3px;
+  transition: 1s all;
+}
+
+.card-box p {
+  line-height: 1.5;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.card-buttons button {
+  font-size: 1.1rem;
+  padding: 4px;
+  border-radius: 10px;
+  font-weight: bold;
+  line-height: 2;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(27, 27, 27, 0.2);
+  background-color: rgba(255, 255, 255, 0.349);
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  border: 5px solid rgb(14, 174, 238);
+  position: relative;
+  left: calc(50% - 50px);
+  text-align: center;
+  transition: 1s all;
+  font-size: 1.3rem;
+}
+
+.triangle-buttons{
+  margin-right: 10px;
+}
+
+.triangle-buttons button {
+  font-size: 1.1rem;
+  margin: 3px;
+  border-radius: 10px;
+  font-weight: bold;
+  line-height: 2;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid rgb(125, 158, 168);
+  position: relative;
+  left: calc(50% - 50px);
+  margin-top: 15px;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.return{
+  font-size: 1.3rem;
+}
+
+.footer{
+  padding: 10px;
+}
+
+.footer p {
+  font-size: 1.2rem;
+}
