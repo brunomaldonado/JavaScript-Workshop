@@ -28,30 +28,30 @@ html {
   src: url("../fonts/vorname/Vorname.otf") format('truetype');
 }
 
-.container-nav-menu{
+.container-nav-menu {
   /* background-color: rgb(94, 93, 86); */
   background: linear-gradient(25deg, #e2e9cb, #b3cbd6);
   height: 50px;
   width: 100%;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.nav-logo--container{
+.nav-logo--container {
   position: relative;
   left: calc(50% - 50px);
   top: 2px;
   text-decoration: none;
 }
 
-.nav-logo--container label a{
+.nav-logo--container label a {
   text-decoration: none;
   color: var(--black);
 }
 
-.logo-text{
+.logo-text {
   font-size: 8rem;
   font-family: "vorname";
   text-decoration: none;
@@ -59,7 +59,7 @@ html {
   text-decoration: none;
 }
 
-.nav-items{
+.nav-items {
   position: fixed;
   width: 100%;
   height: 0vh;
@@ -73,26 +73,27 @@ html {
   text-decoration-style: none;
 }
 
-.nav-items li{
+.nav-items li {
   opacity: 0;
   line-height: 30px;
   margin: 50px 0;
   transition: all .5s;
 }
 
-.nav-items li a{
+.nav-items li a {
   color: var(--just-white);
   font-size: 1.8rem;
   text-transform: uppercase;
   text-decoration: none;
 }
 
-.nav-items li a:active, .nav-items li a:hover{
+.nav-items li a:active,
+.nav-items li a:hover {
   color: #1656df;
   transition: 0.5s;
 }
 
-.btn-menu img{
+.btn-menu img {
   display: block;
   margin-right: 20px;
   font-size: 1.8rem;
@@ -101,17 +102,17 @@ html {
   width: 30px;
   height: 30px;
   position: relative;
-} 
+}
 
-#check{
+#check {
   display: none;
 }
 
-#check:checked ~ .nav-items{
+#check:checked~.nav-items {
   height: 100vh;
 }
 
-#check:checked ~ .nav-items li{
+#check:checked~.nav-items li {
   opacity: .9;
 }
 
@@ -135,37 +136,34 @@ html {
   overflow-y: auto;
 } */
 
-.title-header {
+.header--title-container {
+  width: 88%;
+  margin: 0 auto;
+  margin-top: 25px;
   text-align: center;
-  margin-top: 15px;
 }
 
-.title-header h1 {
-  /* margin-top: 5px; */
-  font-size: 1.9rem;
-  color: redx;
+.header--title-container h1 {
+  font-family: "designer";
+  font-size: 2.2rem;
+  line-height: 1;
+  font-weight: 800;
+  margin: 35px 0px 25px 0px;
 }
 
-.title-header h2 {
-  margin-top: 5px;
-  font-size: 1.7rem;
-}
-
-.opcionMenu{
-  /* position: relative;
-  top: 10px;
-  left: 10px; */
+.opcionMenu {
   position: relative;
-  margin-top: 10px;
   display: flex;
   justify-content: center;
   flex-direction: row;
-  /* justify-content: left; */
   flex-wrap: wrap;
 }
 
 .menuButtons {
+  font-size: 1.2rem;
+  width: 70px;
   margin: 5px;
+  margin-bottom: 15px;
   border: none;
   cursor: pointer;
   font-weight: bold;
@@ -176,7 +174,7 @@ html {
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
-.main{
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -193,25 +191,42 @@ html {
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.2);
   background-color: rgba(255, 255, 255, 0.61);
-  margin: 10px;
-  padding: 5px;
+  margin: 0 auto;
+  width: 90%;
+  min-width: 250px;
   max-width: 360px;
   font-family: 'IBM Plex Sans', sans-serif;
   /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 
-#square-content, #triangle-content, #circle-content{
+#square-content,
+#triangle-content,
+#circle-content {
   position: absolute;
+  width: 90%;
+  min-width: 235px;
+  max-width: 360px;
 }
 
-.main-container h3 {
-  padding: 3px;
+.main-container--title {
+  font-size: 1.7rem;
+  padding: 10px;
+  font-weight: 700;
 }
 
-.card {
+.form-container--title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container--card {
   display: flex;
   justify-content: space-between;
+  gap: 15px;
 }
 
 input[type="number"] {
@@ -220,11 +235,9 @@ input[type="number"] {
   outline: none;
   background-color: inherit;
   color: rgb(14, 14, 14);
-  font-size: 1.2rem;
-  padding: 2px;
+  font-size: 1.8rem;
   transition: 0.3s;
   text-align: center;
-  margin-bottom: 13px;
 }
 
 input[type="number"]:focus {
@@ -232,24 +245,23 @@ input[type="number"]:focus {
   box-shadow: 0 0 8px 0 rgb(30, 83, 255);
 }
 
-.inputTriangle {
-  text-align: center;
-}
 
-.results {
-  position: absolute;
-  margin-top: 5px;
-  margin-left: 5px;
-}
-
-.card-box input {
+.form-container--left input {
   margin-top: 10px;
   width: 90px;
   padding: 3px;
   transition: 1s all;
+  margin-bottom: 13px;
 }
 
-.card-box button {
+.form-container--result{
+  margin-top: 8px;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.form-container--right button {
   padding: 3px;
   border-radius: 10px;
   font-weight: bold;
@@ -260,23 +272,22 @@ input[type="number"]:focus {
   background-color: rgba(255, 255, 255, 0.349);
 }
 
-.card-box p {
-  line-height: 1.5;
-  font-weight: bold;
-}
 
-.card-buttons {
+.form-container--right {
   display: flex;
   flex-direction: column;
+  font-size: 1.4rem;
 }
 
-.card-buttons button {
+.form-container--right button {
   position: relative;
   top: 15px;
   padding: 3px;
   margin: 3px;
   border-radius: 10px;
-  font-weight: bold;
+  font-weight: 800;
+  width: 120px;
+  font-size: 1.2rem;
   line-height: 2;
   border: none;
   cursor: pointer;
@@ -284,21 +295,79 @@ input[type="number"]:focus {
   background-color: rgba(255, 255, 255, 0.349);
 }
 
-.triangle-buttons {
+.form-container--square {
+  width: 100px;
+  height: 100px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  border: 5px solid rgb(14, 130, 238);
+  position: relative;
+  left: calc(40% - 50px);
+  text-align: center;
+  transition: 1s all;
+  font-size: 1.4rem;
+}
+
+.form-container--square .a {
+  position: inherit;
+  left: calc(55% - 48px);
+  bottom: calc(30%);
+}
+
+.form-container--square .b {
+  position: inherit;
+  left: calc(100% - 20px);
+  top: calc(20%);
+}
+
+.form-container--square .c {
+  position: inherit;
+  top: calc(70%);
+  left: calc(55% - 48px);
+}
+
+.form-container--square .d {
+  position: inherit;
+  bottom: calc(20%);
+  right: calc(100% - 20px);
+}
+
+/* end square */
+
+.form-container--top{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.form-container--top input{
+  width: 90px;
+  padding: 3px;
+  transition: 1s all;
+  margin-bottom: 13px;
+  margin: 3px;
+}
+
+
+.form-container--sideRight {
   display: flex;
   flex-direction: column;
 }
 
-.triangle-buttons button {
-  display: flex;;
+.form-container--sideRight button {
+  display: flex;
   justify-content: center;
   position: relative;
+  top: 10px;
   left: calc(75% - 55px);
-  width: 45%;
+  width: 120px;
+  font-size: 1.2rem;
   padding: 3px;
   margin: 3px;
   border-radius: 10px;
-  font-weight: bold;
+  font-weight: 800;
   line-height: 2;
   border: none;
   cursor: pointer;
@@ -306,65 +375,20 @@ input[type="number"]:focus {
   background-color: rgba(255, 255, 255, 0.349);
 }
 
-.return{
+.form-container--sideLeft {
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.return {
   background-image: url(../assets/angle-double-left-solid.svg);
   background-repeat: no-repeat;
   background-position: center;
   color: transparent;
 }
 
-.main-container,
-h3 {
-  font-size: 1.2rem;
-}
-
-.form-container {
-  margin-top: 10px;
-}
-
-label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.square {
-  width: 100px;
-  height: 100px;
-  margin-top: 40px;
-  margin-bottom: 10px;
-  border: 5px solid rgb(14, 174, 238);
-  position: relative;
-  left: calc(50% - 50px);
-  text-align: center;
-  transition: 1s all;
-}
-
-.square .a {
-  position: inherit;
-  left: calc(55% - 48px);
-  bottom: calc(40%);
-}
-
-.square .b {
-  position: inherit;
-  left: calc(100% - 20px);
-  top: calc(25% - 15px);
-}
-
-.square .c {
-  position: inherit;
-  top: calc(70% - 15px);
-  left: calc(55% - 48px);
-}
-
-.square .d {
-  position: inherit;
-  bottom: calc(60% - 15px);
-  right: calc(100% - 20px);
-}
-
-.triangle {
+.form-container--triangle {
   width: 0;
   height: 0;
   border-left: 50px solid transparent;
@@ -374,75 +398,120 @@ label {
   left: calc(50% - 50px);
   margin-top: 15px;
   text-align: center;
+  font-size: 1.4rem;
 }
 
-.triangle .a {
+.form-container--triangle .a {
   position: inherit;
   left: calc(50% - 50px);
-  bottom: calc(50% - 30px)
+  bottom: calc(25% - 30px)
 }
 
-.triangle .b {
+.form-container--triangle .b {
   position: inherit;
-  right: calc(25% - 35px);
-  bottom: calc(25% - 5px)
+  right: calc(25% - 45px);
+  bottom: calc(15% - 20px)
 }
 
-.triangle .c {
+.form-container--triangle .c {
   position: inherit;
-  bottom: calc(50% - 50px);
+  bottom: calc(50% - 70px);
   left: calc(5% - 5px);
 }
 
-.triangleone{
+.form-container--triangleArea {
   width: 0;
   height: 0;
-  border-bottom: 100px solid rgb(145, 124, 124);
+  border-bottom: 100px solid rgb(219, 105, 105);
   border-right: 100px solid transparent;
   position: relative;
   left: calc(50% - 50px);
   margin-top: 5px;
   text-align: center;
+  font-size: 1.4rem;
 }
 
-.triangleone .a{
+.form-container--triangleArea .a {
   position: inherit;
-  left: calc(50% - 66px);
+  left: calc(50% - 55px);
   bottom: calc(25% - 45px);
 }
 
-.triangleone .b{
+.form-container--triangleArea .b {
   position: inherit;
-  right: calc(15% - 55px);
+  /* top: calc(55%); */
+  right: calc(35% - 45px);
 }
 
-.triangleone .c{
+.form-container--triangleArea .c {
   position: inherit;
-  bottom: calc(25% - 55px);
+  bottom: calc(25% - 68px);
   right: calc(5% - 25px);
 }
 
-.circle{
+/* end triangle */
+
+.form-container--cardCircle{
+  display: flex;
+  gap: 80px;
+}
+
+.form-container--leftCircle input{
+  margin-top: 10px;
+  width: 90px;
+  padding: 3px;
+  transition: 1s all;
+  margin-bottom: 13px;
+}
+
+.form-container--rightCircle {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+.form-container--rightCircle button{
+  padding: 3px;
+  border-radius: 10px;
+  margin: 3px;
+  line-height: 2;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(27, 27, 27, 0.2);
+  background-color: rgba(255, 255, 255, 0.349);
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.circle-boxCircumferenceTwo{
+  margin: 2px 10px ;
+}
+
+.circle {
   width: 100px;
   height: 100px;
   border: 3px solid green;
   border-radius: 100px;
   position: relative;
-  top: 10px;
-  left: calc(25% - 50px);
+  top: 28px;
+  left: calc(35% - 50px);
+  margin-bottom: 15px;
+  font-size: 1.5rem;
   text-align: center;
 }
 
-.circle .A{
+.circle .A {
   position: relative;
-  top: calc(20% - 5px);
+  top: calc(40% - 5px);
 }
-.circle .r{
+
+.circle .r {
   position: relative;
-  top: calc(50% - 40px);
+  top: calc(50% - 30px);
   left: calc(25% - 5px);
 }
-.circle .P{
+
+.circle .P {
   position: relative;
   bottom: calc(35% - 5px)
 }
@@ -454,7 +523,8 @@ label {
   color: transparent;
   transition: transform .5s;
   position: relative;
-  left: calc(45%);
+  left: calc(44%);
+  bottom: calc(5px);
   width: 30px;
   height: 30px;
   animation: banner 25s linear infinite forwards;
@@ -473,11 +543,6 @@ label {
 
 .footer {
   text-align: center;
-}
-
-.footer p {
-  position: relative;
-  font-size: 1rem;
 }
 
 .modal {
@@ -502,17 +567,17 @@ label {
   padding: 5px;
   border: 2px solid rgba(231, 174, 174, 0.671);
   border-radius: 10px;
-  margin-top: 19px;
-  width: 90%;
-  height: 92%;
+  margin-top: 10px;
+  width: 86%;
+  height: 95%;
   background: rgba(255, 255, 255, 0.959);
-  
+
 }
 
 .close {
   position: absolute;
-  top: 25px;
-  right: 25px;
+  top: 15px;
+  right: 30px;
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -525,8 +590,7 @@ label {
   cursor: pointer;
 }
 
-.footer{
+.footer {
   position: relative;
   padding: 5px;
 }
-

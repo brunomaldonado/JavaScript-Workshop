@@ -52,7 +52,7 @@ html, body {
 .nav-logo--container{
   position: relative;
   left: calc(50% - 50px);
-  top: 1px;
+  top: 2px;
   text-decoration: none;
 }
 
@@ -129,19 +129,22 @@ html, body {
 /* end menu nav */
 
 .header--title-container{
-margin-top: 15px;
+  width: 88%;
+  margin: 0 auto;
+margin-top: 25px;
 text-align: center;
 }
 
 .header--title-container h1 {
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   line-height: 1;
+  font-weight: 800;
 }
 
 .header--title-container p {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin: 15px 0px 25px 0px;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 /* #product-content {display: none;}  */
@@ -168,8 +171,8 @@ main{
 .main-products {
   border: 2px solid rgb(224, 221, 214);
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.2);
-  background-color: rgba(255, 255, 255, 0.61);
+  /* background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.61); */
   width: 90%;
   min-width: 235px;
   max-width: 360px;
@@ -276,6 +279,7 @@ input[type="number"]:focus {
   width: 80px;
   font-size: 1.4rem;
   margin: 5px 0px 15px 0px;
+  border: 2px solid rgba(172, 177, 180, 0.979);
 }
 
 .form-container__buttons{
@@ -334,6 +338,7 @@ input[type="number"]:focus {
   color: var(--black);
   position: relative;
   left: calc(50% - 50px);
+  border: 2px solid rgba(172, 177, 180, 0.979);
 }
 
 

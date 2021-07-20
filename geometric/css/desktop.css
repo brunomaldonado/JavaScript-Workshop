@@ -59,45 +59,33 @@ transition: none;
 .nav-items li a:hover {
   color: rgb(239, 241, 243)
 }
-/* end nav menu */
+/* end nav menu -------------------------*/
 
 
-/*  */
-.title-header{
-  margin-top: 20px;
+.header--title-container h1 {
+  font-family: "designer";
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 800;
+  margin: 45px 0px 35px 0px;
 }
-.title-header h1 {
-  font-size: 1.6rem;
-  /* color: rgb(127, 140, 255); */
-}
 
-.title-header h2 {
+.menuButtons {
   font-size: 1.4rem;
+  width: 90px;
+  margin: 8px;
+  margin-bottom: 15px;
+  padding: 8px;
 }
 
-.opcionMenu {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-.opcionMenu button{
-  font-size: 1rem;
-}
-
-.main{
+main{
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items:flex-start;
   flex-wrap: wrap;
   margin: 0 auto;
-  max-width: 2000px;
-  /* overflow-x: hidden; */
-  /* height: 100vh; */
-}
-
-.main-container{
-  max-width: 400px;
+  width: 100%;
 }
 
 #square-content, #triangle-content, #circle-content{
@@ -113,17 +101,13 @@ transition: none;
   font-size: 1.6rem;
 }
 
-@media only screen and (min-width: 1366px){
-  /* body{
-    height: 100%;
-  } */
+/* @media only screen and (min-width: 1366px){
 
   .title-header{
     margin-top: 20px;
   }
   .title-header h1 {
     font-size: 1.6rem;
-    /* color: coral; */
   }
   
   .title-header h2 {
@@ -136,9 +120,7 @@ transition: none;
     flex-direction: row;
     justify-content: center;
     align-items:flex-start;
-    /* flex-wrap: wrap; */
     width: 100%;
-    /* height: 100vh; */
   }
   
   .opcionMenu {
@@ -245,4 +227,4 @@ transition: none;
     font-size: 1.5rem;
     color: red;;
   }
-}
+} */

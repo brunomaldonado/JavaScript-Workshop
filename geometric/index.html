@@ -36,45 +36,38 @@
     </div>
   </div>
 
-  <div class="title-header">
-    <h1>Calculating geometric figures.</h1>
-    <h2>JavaScript practical course workshop</h2>
-  </div>
+  <header class="header--title-container">
+    <h1>Calculating geometric figures</h1>
+    <!-- <p>JavaScript practical course workshop</p> -->
+  </header>
 
   <div class="opcionMenu">
-    <button id="btnMenuSquare" class="menuButtons" onclick="squareButton('square-content')">SQUARE</button>;
-    <button id="btnMenuTriangle" class="menuButtons" onclick="triangleButton('triangle-content')">TRIANGLE</button>;
-    <button id="btnMenuCircle" class="menuButtons" onclick="cricleButton('circle-content')">CIRCLE</button>;
-
-    <!--   
-  <button id="btnMenuSquare" class="menuButtons" onclick="squareButton('square-content')">SQUARE</button>;
-  <button id="btnMenuSquare" class="menuButtons" onclick="squareButton('square-content')">SQUARE</button>;
-  <button id="btnMenuSquare" class="menuButtons" onclick="squareButton('square-content')">SQUARE</button>; -->
+    <button id="btnMenuSquare" class="menuButtons" onclick="squareButton('square-content')">SQUARE</button>
+    <button id="btnMenuTriangle" class="menuButtons" onclick="triangleButton('triangle-content')">TRIANGLE</button>
+    <button id="btnMenuCircle" class="menuButtons" onclick="cricleButton('circle-content')">CIRCLE</button>
 
   </div>
 
-  <div class="main">
-
-    <!-- <div class="main-contents"> -->
+  <main>
     <!-- Square -->
     <div id="square-content">
       <div class="main-container">
-        <h3>Calcular el area y el perimetro del cuadrado!</h3>
+        <p class="main-container--title">Calcular el area y el perimetro del cuadrado!</p>
         <form action="#" id="form-container" class="form-container">
-          <label id="question">Cuanto mide cada lado del cuadrado?</label>
-          <div class="card">
-            <div class="card-box">
+          <p class="form-container--title" id="question">Cuanto mide cada lado del cuadrado?</p>
+          <div class="form-container--card">
+            <div class="form-container--left">
               <input type="number" class="sides" id="side" placeholder="side" required>
-              <p id="squareArea"></p>
-              <p id="squarePerimeter"></p>
+              <p class="form-container--result" id="squareArea"></p>
+              <p class="form-container--result" id="squarePerimeter"></p>
             </div>
-            <div class="card-buttons">
+            <div class="form-container--right">
               <button id="area" type="button" onclick="calculateAreaSquare()">Calculate Area</button>
-              <button id="perimeter" type="button" onclick="calculatePerimeterSquare()">Calculate Perimeter</button>
+              <button id="perimeter" type="button" onclick="calculatePerimeterSquare()">Perimeter</button>
               <button id="reset" type="button" onclick="resetAll()">Reset</button>
             </div>
           </div>
-          <div id="square" class="square">
+          <div id="square" class="form-container--square">
             <div id="SqSide1" class="a">a</div>
             <div id="SqSide2" class="b">b</div>
             <div id="SqSide3" class="c">c</div>
@@ -93,49 +86,48 @@
     <!-- Triangle -->
     <div id="triangle-content">
       <div class="main-container">
-        <h3>Calcular el area, el perimetro y la altura del triangulo!</h3>
+        <p class="main-container--title">Calcular el area, el perimetro y la altura del triangulo!</p>
         <form action="#" id="form-container" class="form-container">
-          <label id="questionH">Cuanto mide la altura del triangulo?</label>
-          <div id="triangleCard" class="card">
-            <div id="card-box" class="card-box">
-              <div id="inputTriangle" class="inputTriangle">
-                <input type="number" class="sides" id="side1" placeholder="side1" required>
-                <input type="number" class="sides" id="side2" placeholder="side2" required>
-                <input type="number" class="sides" id="side3" placeholder="side3" required>
+          <p class="form-container--title" id="questionH">Cuanto mide la altura del triangulo?</p>
+          <div id="triangleCard" class="form-container--card">
+            <div id="inputTriangle" class="form-container--top">
+              <input type="number" class="sides" id="side1" placeholder="side1" required>
+              <input type="number" class="sides" id="side2" placeholder="side2" required>
+              <input type="number" class="sides" id="side3" placeholder="side3" required>
+            </div>
+            <!-- calculate area here -->
+            <div id="box-triangleArea" class="card-box">
+              <p class="form-container--title" id="questionA">Cuanto mide el area del triangulo?</p>
+              <div class="form-container--top">
+                <input type="number" class="sides" id="base" placeholder="base" required>
+                <input type="number" class="sides" id="height" placeholder="height" required>
               </div>
-              <div id="box-triangleArea" class="card-box">
-                <label id="questionA">Cuanto mide el area del triangulo?</label>
-                <div class="inputTriangle">
-                  <input type="number" class="sides" id="base" placeholder="base" required>
-                  <input type="number" class="sides" id="height" placeholder="height" required>
-                </div>
-                <div class="results">
-                  <p id="triangleArea"></p>
-                </div>
-                <div class="triangle-buttons">
-                  <button id="area" type="button" onclick="calculateAreaTriangle()">Calculate Area</button>
-                  <button type="button" onclick="resetAll()">Reset</button>
-                  <button type="button" class="return" onclick="toReturn('triangleCard')">Return</button>
-                </div>
+              <div class="form-container--sideLeft">
+                <p class="form-container--result" id="triangleArea"></p>
               </div>
-              <div class="results">
-                <p id="trianglePerimeter"></p>
-                <p id="triangleHeight"></p>
+              <div class="form-container--sideRight">
+                <button id="area" type="button" onclick="calculateAreaTriangle()">Calculate Area</button>
+                <button type="button" onclick="resetAll()">Reset</button>
+                <button type="button" class="return" onclick="toReturn('triangleCard')">Return</button>
               </div>
             </div>
-            <div id="triangleButtons" class="triangle-buttons">
+            <div class="form-container--sideLeft">
+              <p class="form-container--result" id="trianglePerimeter"></p>
+              <p class="form-container--result" id="triangleHeight"></p>
+            </div>
+            <div id="triangleButtons" class="form-container--sideRight">
               <button id="perimeter" type="button" onclick="calculatePerimeterTriangle()">Perimeter</button>
               <button id="height" type="button" onclick="calculateHeightTriangle()">Height</button>
               <button id="area" type="button" onclick="buttonTriangleArea('box-triangleArea')">Area</button>
               <button type="button" onclick="resetAll()">Reset</button>
             </div>
           </div>
-          <div id="triangle" class="triangle">
+          <div id="triangle" class="form-container--triangle">
             <div id="TrSide1" class="a">a</div>
             <div id="TrSide2" class="b">b</div>
             <div id="TrSide3" class="c">c</div>
           </div>
-          <div id="triangleone" class="triangleone">
+          <div id="triangleone" class="form-container--triangleArea">
             <div id="TrHeight" class="a">height</div>
             <div id="TrHip" class="b">hip</div>
             <div id="TrBase" class="c">base</div>
@@ -155,20 +147,22 @@
     <!-- Circle -->
     <div id="circle-content">
       <div class="main-container">
-        <h3>Calcular el area, el perimetro y el <strong><i>r</i></strong> del circulo!</h3>
+        <p class="main-container--title">Calcular el area, el perimetro y el <strong><i>r</i></strong> del circulo!</p>
         <form action="#" id="form-container" class="form-container">
-          <div id="box-Circle" class="circle-boxCircumference">
-            <label id="questionR">Cuanto mide el radio del circulo?</label>
-            <div class="card">
-              <div class="card-box">
-                <div id="inputRadio" class="inputRadio">
+          <div id="box-Circle" class="circle-boxCircumferenceOne">
+            <p class="form-container--title" id="questionR">Cuanto mide el radio del circulo?</p>
+            <div class="form-container--cardCircle">
+              <div class="form-container--leftCircle">
+                <div id="inputRadio">
                   <input type="number" class="radio" id="radio" placeholder="radio" required>
                 </div>
-                <p id="circleArea"></p>
-                <p id="circlePerimeter"></p>
-                <p id="circleDiameter"></p>
+                <div class="form-container--sideLeft">
+                  <p class="form-container--result" id="circleArea"></p>
+                  <p class="form-container--result" id="circlePerimeter"></p>
+                  <p class="form-container--result" id="circleDiameter"></p>
+                </div>
               </div>
-              <div class="card-buttons">
+              <div class="form-container--rightCircle">
                 <button id="area" type="button" onclick="calculateAreaCircle()">Area</button>
                 <button id="perimeter" type="button" onclick="calculatePerimeterCircle()">Perimeter</button>
                 <button id="diameter" type="button" onclick="calculateDiameterCircle()">Diameter</button>
@@ -178,18 +172,17 @@
               </div>
             </div>
           </div>
-          <div id="box-Circumference" class="circle-boxCircumference">
-            <label id="questionC">Cuanto mide el radio, el perimetro y el area del circulo?</label>
-            <div class="card">
-              <div class="card-box">
-                <div class="inputDiameter">
-                  <input type="number" class="radio" id="totalDiameter" placeholder="diameter" required>
-                </div>
-                <p id="SecondCircleArea"></p>
-                <p id="SecondCirclePerimeter"></p>
-                <p id="circleRadio"></p>
+          <div id="box-Circumference" class="circle-boxCircumferenceTwo">
+            <p class="form-container--title" id="questionC">Cuanto mide el radio, el perimetro y el area del circulo?
+            </p>
+            <div class="form-container--card">
+              <div class="form-container--left">
+                <input type="number" class="radio" id="totalDiameter" placeholder="diameter" required>
+                <p class="form-container--result" id="SecondCircleArea"></p>
+                <p class="form-container--result" id="SecondCirclePerimeter"></p>
+                <p class="form-container--result" id="circleRadio"></p>
               </div>
-              <div class="card-buttons">
+              <div class="form-container--right">
                 <button id="SecondArea" type="button" onclick="calculateSecondAreaCircle()">Calculate Area</button>
                 <button id="SecondPerimeter" type="button" onclick="calculateSecondPerimeterCircle()">Perimeter</button>
                 <button id="circleRadio" type="button" onclick="calculateRadioCircle()">Radio</button>
@@ -214,111 +207,7 @@
         </div>
       </div>
     </div>
-
-    <!-- prooft -->
-    <!-- <div id="square-content">
-      <div class="main-container">
-        <h3>Calcular el area y el perimetro del cuadrado!</h3>
-        <form action="#" id="form-container" class="form-container">
-          <label id="question">Cuanto mide cada lado del cuadrado?</label>
-          <div class="card">
-            <div class="card-box">
-              <input type="number" class="sides" id="side" placeholder="side" required>
-              <p id="squareArea"></p>
-              <p id="squarePerimeter"></p>
-            </div>
-            <div class="card-buttons">
-              <button id="area" type="button" onclick="calculateAreaSquare()">Calculate Area</button>
-              <button id="perimeter" type="button" onclick="calculatePerimeterSquare()">Calculate Perimeter</button>
-              <button id="reset" type="button" onclick="resetAll()">Reset</button>
-            </div>
-          </div>
-          <div id="square" class="square">
-            <div id="SqSide1" class="a">a</div>
-            <div id="SqSide2" class="b">b</div>
-            <div id="SqSide3" class="c">c</div>
-            <div id="SqSide4" class="d">d</div>
-          </div>
-        </form>
-        <section class="banner" onclick="SquareInfo()"><img src="./assets/battle-net-brands.svg" alt=""></section>
-        <div id="myModal" class="modal">
-          <div class="modal-content">
-            <span id="close" class="close" onclick="close()"></span>
-            <p>Some text in the modal</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="square-content">
-      <div class="main-container">
-        <h3>Calcular el area y el perimetro del cuadrado!</h3>
-        <form action="#" id="form-container" class="form-container">
-          <label id="question">Cuanto mide cada lado del cuadrado?</label>
-          <div class="card">
-            <div class="card-box">
-              <input type="number" class="sides" id="side" placeholder="side" required>
-              <p id="squareArea"></p>
-              <p id="squarePerimeter"></p>
-            </div>
-            <div class="card-buttons">
-              <button id="area" type="button" onclick="calculateAreaSquare()">Calculate Area</button>
-              <button id="perimeter" type="button" onclick="calculatePerimeterSquare()">Calculate Perimeter</button>
-              <button id="reset" type="button" onclick="resetAll()">Reset</button>
-            </div>
-          </div>
-          <div id="square" class="square">
-            <div id="SqSide1" class="a">a</div>
-            <div id="SqSide2" class="b">b</div>
-            <div id="SqSide3" class="c">c</div>
-            <div id="SqSide4" class="d">d</div>
-          </div>
-        </form>
-        <section class="banner" onclick="SquareInfo()"><img src="./assets/battle-net-brands.svg" alt=""></section>
-        <div id="myModal" class="modal">
-          <div class="modal-content">
-            <span id="close" class="close" onclick="close()"></span>
-            <p>Some text in the modal</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="square-content">
-      <div class="main-container">
-        <h3>Calcular el area y el perimetro del cuadrado!</h3>
-        <form action="#" id="form-container" class="form-container">
-          <label id="question">Cuanto mide cada lado del cuadrado?</label>
-          <div class="card">
-            <div class="card-box">
-              <input type="number" class="sides" id="side" placeholder="side" required>
-              <p id="squareArea"></p>
-              <p id="squarePerimeter"></p>
-            </div>
-            <div class="card-buttons">
-              <button id="area" type="button" onclick="calculateAreaSquare()">Calculate Area</button>
-              <button id="perimeter" type="button" onclick="calculatePerimeterSquare()">Calculate Perimeter</button>
-              <button id="reset" type="button" onclick="resetAll()">Reset</button>
-            </div>
-          </div>
-          <div id="square" class="square">
-            <div id="SqSide1" class="a">a</div>
-            <div id="SqSide2" class="b">b</div>
-            <div id="SqSide3" class="c">c</div>
-            <div id="SqSide4" class="d">d</div>
-          </div>
-        </form>
-        <section class="banner" onclick="SquareInfo()"><img src="./assets/battle-net-brands.svg" alt=""></section>
-        <div id="myModal" class="modal">
-          <div class="modal-content">
-            <span id="close" class="close" onclick="close()"></span>
-            <p>Some text in the modal</p>
-          </div>
-        </div>
-      </div>
-    </div> -->
-  </div>
-  <!-- </div> -->
+  </main>
 
   <!-- <footer class="footer">
     <p>Copyright 2021 <strong style="color:rgb(21, 21, 22)">Bruno Maldonado. </strong>All rights reserved.</p>

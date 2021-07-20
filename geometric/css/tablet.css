@@ -41,48 +41,39 @@
   text-decoration-style: none;
 }
 
-.title-header h1 {
-  font-size: 1.6rem;
-  /* color: aqua; */
+/* end nav */
+
+
+.header--title-container h1 {
+  font-family: "designer";
+  font-size: 2.8rem;
+  line-height: 1;
+  font-weight: 800;
+  margin: 45px 0px 35px 0px;
 }
 
-.title-header h2 {
+.menuButtons {
   font-size: 1.4rem;
-}
-
-.opcionMenu {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-
-.opcionMenu button{
-  margin-top: 10px;
-  font-size: 1rem;
-
+  width: 90px;
+  margin: 8px;
+  margin-bottom: 15px;
+  padding: 8px;
 }
 
 .main{
   display: flex;
 }
 
-/* .main-contents{
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-} */
-
-.main-container{
+#square-content,
+#triangle-content,
+#circle-content {
+  position: absolute;
+  width: 90%;
+  min-width: 235px;
   max-width: 400px;
-}
-.main-container h3 {
-  padding: 3px;
-  font-size: 1.4rem
+  margin: 0 auto;
 }
 
-label{
-  font-size: 1.4rem
-}
 
 input[type="number"] {
   border: 2px solid rgb(231, 223, 207);
@@ -90,84 +81,152 @@ input[type="number"] {
   outline: none;
   background-color: inherit;
   color: rgb(14, 14, 14);
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding: 3px;
   transition: 0.3s;
   text-align: center;
   margin-bottom: 13px;
 }
 
-.card-box input {
-  margin-top: 10px;
-  width: 110px;
-  padding: 3px;
-  transition: 1s all;
+.form-container--left input {
+  margin-top: 13px;
+  width: 100px;
+  padding: 4px;
 }
 
-.card-box p {
-  line-height: 1.5;
-  font-weight: bold;
+.main-container--title {
+  font-size: 1.9rem;
+}
+
+.form-container--title {
+  font-size: 1.8rem;
+}
+
+.form-container--result{
+  margin-top: 15px;
+  font-size: 1.8rem;
+}
+
+.form-container--right {
+  font-size: 1.6rem;
+}
+
+.form-container--right button {
+  position: relative;
+  top: 15px;
+  padding: 4px;
+  margin: 4px;
+  border-radius: 10px;
+  font-weight: 800;
+  width: 130px;
   font-size: 1.4rem;
 }
 
-.card-buttons button {
-  font-size: 1.1rem;
+
+.form-container--square {
+  font-size: 1.5rem;
+}
+
+.form-container--square .a {
+  position: inherit;
+  left: calc(55% - 48px);
+  bottom: calc(35%);
+}
+
+.form-container--square .b {
+  position: inherit;
+  left: calc(100% - 20px);
+  top: calc(20%);
+}
+
+.form-container--square .c {
+  position: inherit;
+  top: calc(73%);
+  left: calc(55% - 48px);
+}
+
+.form-container--square .d {
+  position: inherit;
+  bottom: calc(20%);
+  right: calc(100% - 20px);
+}
+
+/* end square */
+
+.form-container--top input{
+  margin-top: 10px;
+  width: 100px;
+  padding: 4px;
+  margin: 4px;
+}
+
+.form-container--sideRight button {
+  position: relative;
+  top: 18px;
+  left: calc(75% - 55px);
+  width: 122px;
+  font-size: 1.4rem;
+  padding: 5px;
+  margin: 3px;
+}
+
+.form-container--triangle {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.form-container--triangleArea {
+  position: relative;
+  left: calc(40% - 50px);
+  margin-top: 5px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* end triangle */
+
+.form-container--cardCircle{
+  display: flex;
+  gap: 100px;
+}
+
+.form-container--leftCircle input{
+  margin-top: 10px;
+  width: 100px;
+  padding: 4px;
+  transition: 1s all;
+  margin-bottom: 13px;
+}
+
+.form-container--rightCircle {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+.form-container--rightCircle button{
   padding: 4px;
   border-radius: 10px;
-  font-weight: bold;
+  width: 125px;
+  margin: 4px;
   line-height: 2;
   border: none;
   cursor: pointer;
   background-color: rgba(27, 27, 27, 0.2);
   background-color: rgba(255, 255, 255, 0.349);
+  font-weight: 800;
+  font-size: 1.4rem;
 }
 
-.square {
-  width: 100px;
-  height: 100px;
-  margin-top: 50px;
-  margin-bottom: 10px;
-  border: 5px solid rgb(14, 174, 238);
+.circle-boxCircumferenceTwo{
+  margin: 2px 10px ;
+}
+
+.banner {
   position: relative;
-  left: calc(50% - 50px);
-  text-align: center;
-  transition: 1s all;
-  font-size: 1.3rem;
-}
-
-.triangle-buttons{
-  margin-right: 10px;
-}
-
-.triangle-buttons button {
-  font-size: 1.1rem;
-  margin: 3px;
-  border-radius: 10px;
-  font-weight: bold;
-  line-height: 2;
-}
-
-.triangle {
-  width: 0;
-  height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 100px solid rgb(125, 158, 168);
-  position: relative;
-  left: calc(50% - 50px);
-  margin-top: 15px;
-  text-align: center;
-  font-size: 1.3rem;
-}
-
-.return{
-  font-size: 1.3rem;
-}
-
-.footer{
-  padding: 10px;
-}
-
-.footer p {
-  font-size: 1.2rem;
+  left: calc(43%);
+  bottom: calc(5px);
+  width: 40px;
+  height: 40px;
 }
