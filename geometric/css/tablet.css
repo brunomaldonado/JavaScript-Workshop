@@ -19,7 +19,7 @@ header{
   color: #141414;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 60px;
+  font-size: 80px;
   position: relative;
   left: 20px;
 }
@@ -39,6 +39,7 @@ nav {
   /* background: linear-gradient(25deg, #cbe8e9, #69d3f3); */
   background-image: url(../images/0008.jpg);
   background-size: cover;
+  
 }
 
 nav ul {
@@ -54,26 +55,22 @@ nav ul li {
 /* end nav */
 
 .header--title-container {
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-  top: 15px;
+  display: flex;
+  justify-content: center;
 }
 
 .header--title-container h1 {
   font-family: "designer";
-  font-size: 2.8rem;
-  line-height: 1;
+  font-size: 3rem;
   font-weight: 800;
-  /* margin: 45px 0px 35px 0px; */
+  margin: 5px 0px 35px 0px;
 }
 
 .menuButtons {
   font-size: 1.4rem;
   width: 90px;
   margin: 8px;
-  margin-top: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   padding: 8px;
 }
 
@@ -82,33 +79,11 @@ main{
   /* flex-wrap: wrap; */
 }
 
-/* .main-container--contents{
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-
-} */
-
 .main-container{
   max-width: 400px;
   margin: 20px;
 }
-
-/* .main-container--contents{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-} */
-
-
-/* #square-content,
-#triangle-content,
-#circle-content {
-  position: absolute;
-  max-width: 400px;
-} */
+j
 
 input[type="number"] {
   border: 2px solid rgb(231, 223, 207);
@@ -311,7 +286,6 @@ input[type="number"] {
 footer{
   width: 100%;
   text-align: center;
-  padding: 13px;
-  font-size: 1.6rem;
-  font-weight: 800;
+  padding: 15px;
+  font-size: 1.7rem;
 }

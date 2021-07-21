@@ -3,6 +3,7 @@
   padding: 0;
   margin: 0;
 }
+
 :root {
   /* Colors background */
   --bitcoin-orange: #F7931A;
@@ -16,11 +17,12 @@
   --just-white: #FFFFFF;
 }
 
-html, body {
+html,
+body {
   background-color: rgb(78, 76, 74);
   font-family: 'Poppins', sans-serif;
   background-image: url(../images/0008.jpg);
-   background-size: cover;
+  background-size: cover;
   background-repeat: no-repeat;
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -48,13 +50,14 @@ header {
   /* background: linear-gradient(25deg, #a0d9db, #69eaf3); */
   background-image: url(../images/0008.jpg);
   background-size: cover;
-  position: fixed;
+  position: relative;
+  /* position: fixed; */
   z-index: 999;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 
-.content a{
+.content a {
   height: 50px;
   display: flex;
   justify-content: center;
@@ -64,20 +67,22 @@ header {
 
 
 .logo {
-  color: #0f0f0f;
+  color: #111111;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 55px;
+  font-size: 70px;
   font-family: "vorname";
+  position: relative;
+  top: 2px;
 }
 
-.toggler {
+.toggler img {
   color: #0d0d0e;
   cursor: pointer;
   position: absolute;
-  top: 12px;
+  top: 10px;
   right: 20px;
-  font-size: 14px;
+  width: 25px;
 }
 
 /* START NAVIGATION */
@@ -86,9 +91,9 @@ nav {
   display: none;
   /* background-color: #436066; */
   background: linear-gradient(25deg, #cbe8e9, #69d3f3);
-  /* background-image: url(../images/0008.jpg); */
-  /* background-size: cover; */
-  /* filter: blur(1.2rem); */
+  background-image: url(../images/11731.jpg);
+  background-size: cover;
+
 }
 
 nav ul {
@@ -97,16 +102,15 @@ nav ul {
   flex-direction: column;
   align-items: center;
   list-style: none;
-  
+
 }
 
 nav ul li a {
   text-decoration: none;
   color: #141414;
-  font-size: 18px;
   line-height: 40px;
   transition: 0.3s ease-out;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   text-transform: uppercase;
   font-weight: 600;
 
@@ -122,20 +126,16 @@ nav ul li a:hover {
 
 /* end menu nav */
 
-.header--title-container{
+.header--title-container {
   width: 88%;
-  margin: 0 auto;
-text-align: center;
-
+  margin: 0 auto; 
+  text-align: center;
+  margin-top: 25px;
 }
 
 .header--title-container h1 {
   font-size: 1.8rem;
-  line-height: 1;
   font-weight: 800;
-  
-/* margin-top: 75px; */
-
 }
 
 .header--title-container p {
@@ -143,6 +143,8 @@ text-align: center;
   margin: 15px 0px 25px 0px;
   font-weight: bold;
 }
+
+
 
 /* #product-content {display: none;}  */
 #product-content1 {
@@ -153,13 +155,12 @@ text-align: center;
   margin: auto;
 }
 
-main{
+main {
   width: 100%;
   height: auto;
-  /* background-color: var(--off-white); */
 }
 
-.main-container--contents{
+.main-container--contents {
   height: 100vh;
   width: 100vw;
 
@@ -192,17 +193,17 @@ main{
   align-items: center;
 }
 
-.main-products__container img{
+.main-products__container img {
   width: 150px;
   height: 120px;
 }
 
- .form-container {
+.form-container {
   /* display: flex;
   flex-direction: column;
   align-items: center; */
   margin-top: 10px;
-} 
+}
 
 input[type="number"] {
   border: 2px solid rgb(231, 223, 207);
@@ -229,11 +230,11 @@ input[type="number"]:focus {
   margin-bottom: 15px;
 }
 
-.form-container .inputBox:last-child{
+.form-container .inputBox:last-child {
   margin-bottom: 0;
 }
 
-.form-container .inputBox input{
+.form-container .inputBox input {
   position: absolute;
   top: 0;
   left: 0;
@@ -243,7 +244,7 @@ input[type="number"]:focus {
   text-align: center;
 }
 
-.form-container .inputBox span{
+.form-container .inputBox span {
   position: absolute;
   top: 1px;
   left: 1px;
@@ -257,8 +258,8 @@ input[type="number"]:focus {
   transition: 0.5s;
 }
 
-.form-container .inputBox input:focus ~ span,
-.form-container .inputBox input:valid ~ span{
+.form-container .inputBox input:focus~span,
+.form-container .inputBox input:valid~span {
   transform: translateX(-89px) translateY(1px);
   /* transform: translateY(-15px); */
   text-align: right;
@@ -279,10 +280,10 @@ input[type="number"]:focus {
   border: 2px solid rgba(172, 177, 180, 0.979);
 }
 
-.form-container__buttons{
+.form-container__buttons {
   display: flex;
   gap: 10px;
-  
+
 }
 
 .totalPrice {
@@ -294,7 +295,7 @@ input[type="number"]:focus {
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
-.totalPrice span{
+.totalPrice span {
   font-size: 1.6rem;
   padding: 2px;
   border-radius: 5px;
@@ -303,7 +304,7 @@ input[type="number"]:focus {
   background-color: rgba(255, 255, 255, 0.61);
 }
 
-.totalPrice p{
+.totalPrice p {
   text-align: center;
   font-size: 2rem;
   position: relative;
@@ -324,7 +325,7 @@ input[type="number"]:focus {
   padding: 3px;
 }
 
-.form-container .buttonCoupons{
+.form-container .buttonCoupons {
   border-radius: 10px;
   border: none;
   font-weight: bold;
@@ -393,7 +394,7 @@ input[type="number"]:focus {
   font-weight: bold;
 }
 
-.card-container-product__item--p1 h4:nth-child(2){
+.card-container-product__item--p1 h4:nth-child(2) {
   color: #f80b0b;
   font-size: 2rem;
 }
@@ -423,10 +424,10 @@ input[type="number"]:focus {
   cursor: pointer;
 }
 
-footer{
+footer {
   width: 100%;
   text-align: center;
   padding: 10px;
   font-size: 1.4rem;
-  font-weight: bold;  
+  font-weight: bold;
 }

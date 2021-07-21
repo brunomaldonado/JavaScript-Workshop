@@ -19,7 +19,7 @@ header{
   color: #0b0c0c;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 60px;
+  font-size: 90px;
   position: relative;
   left: 20px;
 }
@@ -52,19 +52,15 @@ nav ul li {
 
 .header--title-container h1 {
   font-family: "designer";
-  font-size: 3rem;
-  line-height: 1;
+  font-size: 3.6rem;
   font-weight: 800;
-  
-  /* margin: 35px 0px 35px 0px; */
+  margin: 5px 0px 35px 0px;
 }
 
 .menuButtons {
   font-size: 1.3rem;
   width: 90px;
   margin: 8px;
-  margin-top: 25px;
-  margin-bottom: 15px;
   padding: 8px;
 }
 
@@ -90,5 +86,5 @@ footer{
   width: 100%;
   text-align: center;
   padding: 20px;
-  font-size: 1.8rem;
+  font-size: 2rem;
 }

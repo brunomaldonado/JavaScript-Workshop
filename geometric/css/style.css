@@ -34,6 +34,7 @@ header {
   /* background: linear-gradient(25deg, #a0d9db, #69eaf3); */
   background-image: url(../images/0008.jpg);
   background-size: cover;
+  position: relative;
   /* position: fixed; */
   z-index: 999;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -53,17 +54,17 @@ header {
   color: #0f0f0f;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 55px;
+  font-size: 70px;
   font-family: "vorname";
 }
 
-.toggler {
+.toggler img{
   color: #0d0d0e;
   cursor: pointer;
   position: absolute;
-  top: 12px;
+  top: 10px;
   right: 20px;
-  font-size: 14px;
+  width: 25px;
 }
 
 /* START NAVIGATION */
@@ -71,6 +72,8 @@ nav {
   width: 100%;
   display: none;
   background: linear-gradient(25deg, #cbe8e9, #69d3f3);
+  background-image: url(../images/11731.jpg);
+  background-size: cover;
 }
 
 nav ul {
@@ -85,7 +88,6 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   color: #141414;
-  font-size: 18px;
   line-height: 40px;
   transition: 0.3s ease-out;
   font-size: 1.4rem;
@@ -582,5 +584,5 @@ footer{
   text-align: center;
   padding: 10px;
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: 700;
 }

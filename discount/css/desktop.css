@@ -19,9 +19,10 @@ header{
   color: #0b0c0c;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 60px;
+  font-size: 90px;
   position: relative;
   left: 20px;
+  /* bottom: 8px; */
 }
 
 .toggler {

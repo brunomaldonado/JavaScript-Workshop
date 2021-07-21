@@ -72,17 +72,19 @@ header {
   color: #0f0f0f;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 55px;
+  font-size: 60px;
   font-family: "vorname";
+  position: relative;
+  top: 2px;
 }
 
-.toggler {
+.toggler img{
   color: #0d0d0e;
   cursor: pointer;
   position: absolute;
-  top: 12px;
+  top: 10px;
   right: 20px;
-  font-size: 14px;
+  width: 25px;
 }
 
 /* START NAVIGATION */
@@ -91,9 +93,8 @@ nav {
   display: none;
   /* background-color: #436066; */
   background: linear-gradient(25deg, #cbe8e9, #69d3f3);
-  /* background-image: url(../images/0008.jpg); */
-  /* background-size: cover; */
-  /* filter: blur(1.2rem); */
+  background-image: url(../images/11731.jpg);
+  background-size: cover;
 }
 
 nav ul {
