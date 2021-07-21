@@ -9,6 +9,8 @@
   <meta name="robots" content="Follow, html">
   <meta name="description" content="JavaScript practical course workshop">
   <title>JavaScript </title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../fontawesome-free-5.15.2-web/css/all.css">
@@ -19,22 +21,22 @@
 
 <body>
 
-  <div class="container-nav-menu">
-    <div class="nav-logo--container">
-      <img src="" alt="">
-      <label class="logo-text"><a href="#">BM</a></label>
+  <header>
+    <div class="content">
+      <a class="logo" href="#">BM</a>
+      <div class="toggler"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></div>
+      <!-- Start Navigation -->
+      <nav>
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="./geometric/index.html">Workshop #1</a></li>
+          <li><a href="./discount/index.html">Workshop #2</a></li>
+          <li><a href="">Workshop #3</a></li>
+        </ul>
+      </nav>
     </div>
-    <ul class="nav-items">
-      <li><a class="#" href="">Home</a></li>
-      <li><a href="./geometric/index.html">Workshop #1</a></li>
-      <li><a href="./discount/index.html">Workshop #2</a></li>
-      <li><a href="">Workshop #3</a></li>
-    </ul>
-    <div id="menuBtn" class="btn-menu">
-      <img id="menu" src="./assets/bars-solid.svg" alt="">
-    </div>
-  </div>
-  
+  </header>
+
   <main>
     <section class="main-container">
       <article class="main-container--card">
@@ -78,10 +80,12 @@
     </section>
   </main>
 
-  <footer class="end-page__footer">
+  <footer>
     <p>Copyright © 2021. <strong style="color:rgb(22, 23, 26)">Bruno Maldonado. </strong>All rights reserved.</p>
   </footer>
-  <!-- <script src="./js/main.js"></script> -->
+
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>

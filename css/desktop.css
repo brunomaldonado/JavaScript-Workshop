@@ -1,80 +1,71 @@
-/* html{
-  background-color: rgb(134, 88, 55);
-} */
-
-.container-nav-menu{
-  /* background-color: transparent; */
-  /* background-color: rgb(96, 172, 243); */
-  background: linear-gradient(25deg, #4b2d7c, #0da7ef7c);
+header{
   width: 80%;
+  height: 60px;
   margin: 0 auto;
-  border-radius: 10px;
-  margin-top: 10px;
-  height: 70px;
-  display: flex;
-  justify-content:space-between;
-  align-items: center;
-}
-
-.nav-logo--container{
+  border-radius: 20px;
   position: relative;
-  left: calc(10% - 50px);
+  top: 10px;
+}
+
+.content a{
+  height: 60px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  text-align: left;
+}
+
+.logo {
+  color: #0b0c0c;
+  text-transform: uppercase;
   text-decoration: none;
-  margin-bottom: 35px;
+  font-size: 60px;
+  position: relative;
+  left: 20px;
 }
 
-.logo-text{
-  font-size: 10rem;
-  font-family: "vorname";
-  text-decoration: none;;
-}
-
-.nav-logo--container label a{
-  text-decoration: none;
-  color: whitesmoke
-}
-
-.btn-menu img{
+.toggler {
   display: none;
 }
 
-.nav-items{
+nav {
+  display: inline-block !important;
   position: relative;
-  top: 0;
+  bottom: 60px;
+  width: auto;
   float: right;
-  text-align: right;
-  height: 23px;
-  background: none;
-transition: none;
+  background-color: transparent;
 }
 
-.nav-items li{
-  display: inline-block;
-  opacity: 1;
-  margin: 0 20px;
-  text-decoration: none;
+nav ul {
+  display: flex;
+  flex-direction: row;
 }
 
-.nav-items li a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-}
-
-.nav-items li a:active,
-.nav-items li a:hover {
-  color: rgb(239, 241, 243)
+nav ul li {
+  /* display: inline-block; */
+  margin-right: 25px;
+  transition: all .5s;
 }
 
 main{
   width: 80%;
-  margin: 0 auto;
+  /* margin: 0 auto;
   margin-top: 50px;
- 
+  */
 }
 
 .main-container{
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
+}
+
+footer{
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  font-size: 1.8rem;
 }

@@ -1,63 +1,51 @@
-/*  nav menu */
-
-.container-nav-menu{
-  /* background-color: transparent; */
-  /* background-color: rgb(96, 172, 243); */
-  background: linear-gradient(25deg, #4b2d7c, #0da7ef7c);
+header{
   width: 80%;
+  height: 60px;
   margin: 0 auto;
-  border-radius: 10px;
-  margin-top: 10px;
-  height: 70px;
-  display: flex;
-  justify-content:space-between;
-  align-items: center;
-}
-
-.nav-logo--container{
+  border-radius: 20px;
   position: relative;
-  left: calc(10% - 50px);
-  margin-bottom: 35px;
+  top: 10px;
+}
 
+.content a{
+  height: 60px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  text-align: left;
+}
+
+.logo {
+  color: #0b0c0c;
+  text-transform: uppercase;
   text-decoration: none;
+  font-size: 60px;
+  position: relative;
+  left: 20px;
 }
 
-.logo-text{
-  font-size: 10rem;
-  font-family: "vorname";
-  text-decoration: none;;
-}
-
-.btn-menu img{
+.toggler {
   display: none;
 }
 
-.nav-items{
+nav {
+  display: inline-block !important;
   position: relative;
-  top: 0;
+  bottom: 60px;
+  width: auto;
   float: right;
-  text-align: right;
-  height: 23px;
-  background: none;
-transition: none;
+  background-color: transparent;
 }
 
-.nav-items li{
-  display: inline-block;
-  opacity: 1;
-  margin: 0 20px;
-  text-decoration: none;
+nav ul {
+  display: flex;
+  flex-direction: row;
 }
 
-.nav-items li a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-}
-
-.nav-items li a:active,
-.nav-items li a:hover {
-  color: rgb(239, 241, 243)
+nav ul li {
+  /* display: inline-block; */
+  margin-right: 25px;
+  transition: all .5s;
 }
 /* end nav menu -------------------------*/
 
@@ -67,13 +55,15 @@ transition: none;
   font-size: 3rem;
   line-height: 1;
   font-weight: 800;
-  margin: 45px 0px 35px 0px;
+  
+  /* margin: 35px 0px 35px 0px; */
 }
 
 .menuButtons {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   width: 90px;
   margin: 8px;
+  margin-top: 25px;
   margin-bottom: 15px;
   padding: 8px;
 }
@@ -85,146 +75,20 @@ main{
   align-items:flex-start;
   flex-wrap: wrap;
   margin: 0 auto;
-  width: 100%;
+  max-width: 2000px;
+}
+
+.main-container{
+  max-width: 400px;
 }
 
 #square-content, #triangle-content, #circle-content{
   position: relative;
-  
 }
 
-.footer{
+footer{
+  width: 100%;
+  text-align: center;
   padding: 20px;
+  font-size: 1.8rem;
 }
-
-.footer p {
-  font-size: 1.6rem;
-}
-
-/* @media only screen and (min-width: 1366px){
-
-  .title-header{
-    margin-top: 20px;
-  }
-  .title-header h1 {
-    font-size: 1.6rem;
-  }
-  
-  .title-header h2 {
-    margin-top: 20px;
-    font-size: 1.4rem;
-  }
-
-  .main{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items:flex-start;
-    width: 100%;
-  }
-  
-  .opcionMenu {
-    margin-top: 10px;
-   text-align: center;
-  }
-  .opcionMenu button{
-    font-size: .8rem;
-  }
-
-  .main-container h3 {
-    padding: 3px;
-    font-size: 1.2rem
-  }
-  
-  label{
-    font-size: 1.3rem
-  }
-  
-  input[type="number"] {
-    border: 2px solid rgb(231, 223, 207);
-    border-radius: 10px;
-    outline: none;
-    background-color: inherit;
-    color: rgb(14, 14, 14);
-    font-size: 1.2rem;
-    padding: 3px;
-    transition: 0.3s;
-    text-align: center;
-    margin-bottom: 13px;
-  }
-  
-  .card-box input {
-    margin-top: 10px;
-    width: 110px;
-    padding: 2px;
-    transition: 1s all;
-  }
-  
-  .card-box p {
-    line-height: 1.5;
-    font-weight: bold;
-    font-size: 1.2rem;
-  }
-  
-  .card-buttons button {
-    font-size: .9rem;
-    padding: 2px;
-    border-radius: 10px;
-    font-weight: bold;
-    line-height: 2;
-    border: none;
-    cursor: pointer;
-    background-color: rgba(27, 27, 27, 0.2);
-    background-color: rgba(255, 255, 255, 0.349);
-  }
-  
-  .square {
-    width: 100px;
-    height: 100px;
-    margin-top: 50px;
-    margin-bottom: 10px;
-    border: 5px solid rgb(14, 174, 238);
-    position: relative;
-    left: calc(50% - 50px);
-    text-align: center;
-    transition: 1s all;
-    font-size: 1.3rem;
-  }
-  
-  .triangle-buttons{
-    margin-right: 5px;
-  }
-  
-  .triangle-buttons button {
-    font-size: .9rem;
-    margin: 3px;
-    border-radius: 10px;
-    font-weight: bold;
-    line-height: 2;
-  }
-  
-  .triangle {
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 100px solid rgb(125, 158, 168);
-    position: relative;
-    left: calc(50% - 50px);
-    margin-top: 15px;
-    text-align: center;
-    font-size: 1.3rem;
-  }
-  
-  .return{
-    font-size: 1rem;
-  }
-
-  .footer{
-    padding: 15px;
-  }
-  .footer p {
-    font-size: 1.5rem;
-    color: red;;
-  }
-} */

@@ -1,3 +1,8 @@
+$(function() {
+	$('.toggler').on('click', function() {
+		$('nav').slideToggle(500);
+  });
+});
 
 const modal = document.getElementById("myModal")
 const modal2 = document.getElementById("myModal2");

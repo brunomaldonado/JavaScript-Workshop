@@ -1,0 +1,50 @@
+header{
+    width: 80%;
+    height: 60px;
+    margin: 0 auto;
+    border-radius: 20px;
+    position: relative;
+    top: 10px;
+}
+
+.content a{
+    height: 60px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+}
+
+.logo {
+    color: #5FC0DC;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 42px;
+    font-weight: bold;
+    position: relative;
+    left: 20px;
+}
+
+.toggler {
+    display: none;
+}
+
+nav {
+    display: inline-block !important;
+    position: relative;
+    bottom: 60px;
+    width: auto;
+    float: right;
+    background-color: transparent;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul li {
+    /* display: inline-block; */
+    margin-right: 25px;
+    transition: all .5s;
+}

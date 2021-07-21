@@ -12,43 +12,42 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
   <title>Geometric good</title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 768px)">
   <link rel="stylesheet" href="./css/desktop.css" media="(min-width: 1024px)">
 </head>
 
 <body>
-  <!-- <div class="portrait"><img src="./images/0004.jpg" alt=""></div> -->
 
-  <div class="container-nav-menu">
-    <div class="nav-logo--container">
-      <img src="" alt="">
-      <label class="logo-text"><a href="../index.html">BM</a></label>
+  <header>
+    <div class="content">
+      <a class="logo" href="#">BM</a>
+      <div class="toggler"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></div>
+      <nav>
+        <ul>
+          <li><a class="active" href="../index.html">Home</a></li>
+          <li><a href="#">Workshop #1</a></li>
+          <li><a href="../discount/index.html">Workshop #2</a></li>
+          <li><a href="">Workshop #3</a></li>
+        </ul>
+      </nav>
     </div>
-    <ul class="nav-items">
-      <li><a class="active" href="../index.html">Home</a></li>
-      <li><a href="#">Workshop #1</a></li>
-      <li><a href="../discount/index.html">Workshop #2</a></li>
-      <li><a href="">Workshop #3</a></li>
-    </ul>
-    <div id="menuBtn" class="btn-menu">
-      <img id="menu" src="./assets/bars-solid.svg" alt="">
-    </div>
-  </div>
-
-  <header class="header--title-container">
-    <h1>Calculating geometric figures</h1>
-    <!-- <p>JavaScript practical course workshop</p> -->
   </header>
+
+  <div class="header--title-container">
+    <h1>Calculating geometric figures</h1>
+  </div>
 
   <div class="opcionMenu">
     <button id="btnMenuSquare" class="menuButtons" onclick="squareButton('square-content')">SQUARE</button>
     <button id="btnMenuTriangle" class="menuButtons" onclick="triangleButton('triangle-content')">TRIANGLE</button>
     <button id="btnMenuCircle" class="menuButtons" onclick="cricleButton('circle-content')">CIRCLE</button>
-
   </div>
 
   <main>
+    <!-- <div class="main-container--contents"> -->
     <!-- Square -->
     <div id="square-content">
       <div class="main-container">
@@ -207,12 +206,14 @@
         </div>
       </div>
     </div>
+    <!-- </div> -->
   </main>
 
-  <!-- <footer class="footer">
-    <p>Copyright 2021 <strong style="color:rgb(21, 21, 22)">Bruno Maldonado. </strong>All rights reserved.</p>
-  </footer> -->
+  <footer>
+    <p>Copyright © 2021. <strong style="color:rgb(22, 23, 26)">Bruno Maldonado. </strong>All rights reserved.</p>
+  </footer>
 
+  <script src="./js/jquery-3.6.0.min.js"></script>
   <script src="./js/main.js"></script>
 </body>
 

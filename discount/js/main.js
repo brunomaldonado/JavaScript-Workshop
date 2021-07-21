@@ -1,8 +1,9 @@
 //clase 12 redes informaticas
 // 
-document.querySelector('.btn-menu').addEventListener('click', ()=>{
-  // console.log('clik!!!');
-  document.querySelector('.nav-items').classList.toggle('show');
+$(function() {
+	$('.toggler').on('click', function() {
+		$('nav').slideToggle(500);
+  });
 });
 
 const btnClose = document.getElementById("close");

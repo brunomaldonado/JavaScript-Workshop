@@ -9,6 +9,8 @@ Software Developer Bruno Maldonado Rigoberto
 Contact brunoutl@gmail.com
 */
 
+
+
 *{
   box-sizing: border-box;
   margin: 0;
@@ -41,91 +43,86 @@ html{
   src: url("../fonts/vorname/Vorname.otf") format('truetype');
 }
 
- .container-nav-menu{
-  /* background-color: rgb(94, 93, 86); */
-  background: linear-gradient(25deg, #e2e9cb, #b3cbd6);
-  height: 50px;
+/* START MENU BAR */
+
+header {
   width: 100%;
-  display: flex;
-  justify-content:space-between;
-  align-items: center;
+  height: 50px;
+
+  /* background-color: #2F2F2F; */
+  /* background: linear-gradient(25deg, #a0d9db, #69eaf3); */
+  background-image: url(../images/0008.jpg);
+  background-size: cover;
+  position: fixed;
+  z-index: 999;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.nav-logo--container{
-  position: relative;
-  left: calc(50% - 50px);
-  top: 2px;
-  text-decoration: none;
+
+.content a{
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
-.nav-logo--container label a{
-  text-decoration: none;
-  color: var(--black);
-}
 
-.logo-text{
-  font-size: 8rem;
-  font-family: "vorname";
-  text-decoration: none;
-  color: var(--just-white);
-  text-decoration: none;
-}
-
-.nav-items{
-  position: fixed;
-  width: 100%;
-  height: 0vh;
-  top: 50px;
-  background: #2f3640;
-  /* opacity: .9; */
-  float: right;
-  text-align: center;
-  transition: all .5s;
-  list-style-type: none;
-  text-decoration-style: none;
-}
-
-.nav-items li{
-  opacity: 0;
-  line-height: 30px;
-  margin: 50px 0;
-  transition: all .5s;
-}
-
-.nav-items li a{
-  color: var(--just-white);
-  font-size: 1.8rem;
+.logo {
+  color: #0f0f0f;
   text-transform: uppercase;
   text-decoration: none;
+  font-size: 55px;
+  font-family: "vorname";
 }
 
-.nav-items li a:active, .nav-items li a:hover{
-  color: #1656df;
-  transition: 0.5s;
-}
-
-.btn-menu img{
-  display: block;
-  margin-right: 20px;
-  font-size: 1.8rem;
+.toggler {
+  color: #0d0d0e;
   cursor: pointer;
-  float: right;
-  width: 30px;
-  height: 30px;
-  position: relative;
-} 
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-size: 14px;
+}
 
-#check{
+/* START NAVIGATION */
+nav {
+  width: 100%;
   display: none;
+  /* background-color: #436066; */
+  background: linear-gradient(25deg, #cbe8e9, #69d3f3);
+  /* background-image: url(../images/0008.jpg); */
+  /* background-size: cover; */
+  /* filter: blur(1.2rem); */
 }
 
-#check:checked ~ .nav-items{
-  height: 100vh;
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  
 }
 
-#check:checked ~ .nav-items li{
-  opacity: .9;
+nav ul li a {
+  text-decoration: none;
+  color: #141414;
+  font-size: 18px;
+  line-height: 40px;
+  transition: 0.3s ease-out;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+
+}
+
+nav ul li a:hover {
+  color: #0e0ae2;
+}
+
+.active {
+  color: #141414;
 }
 
 main{
@@ -137,7 +134,8 @@ main{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 20px;
+  position: relative;
+  top: 55px;
 }
 
 .main-container--card{
@@ -216,9 +214,10 @@ main{
   color: #282623;
 }
 
-.end-page__footer p{
-   text-align: center;
-   font-size: 1.4rem;
-   padding: 10px;
+footer{
+  /* width: 100%; */
+  text-align: center;
+  padding: 10px;
+  font-size: 1.4rem;
+  font-weight: 600;
 }
-
