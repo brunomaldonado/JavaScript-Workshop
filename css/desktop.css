@@ -20,9 +20,13 @@ header{
   text-transform: uppercase;
   text-decoration: none;
   font-size: 90px;
+  display: contents;
   position: relative;
   left: 20px;
-  bottom: 8px;
+  /* bottom: 8; */
+  /* margin-bottom: 20px; */
+  padding-bottom: 18px;
+  /* top: 26px; */
 }
 
 .toggler {

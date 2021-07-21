@@ -56,6 +56,8 @@ header {
   text-decoration: none;
   font-size: 70px;
   font-family: "vorname";
+  position: relative;
+  top: 2px;
 }
 
 .toggler img{
