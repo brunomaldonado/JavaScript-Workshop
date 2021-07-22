@@ -6,6 +6,8 @@ $(function() {
   });
 });
 
+const btnCalculateDiscountCoupons = document.getElementById("buttonCalculateDiscountCoupons");
+
 const btnClose = document.getElementById("close");
 const btnCleanBox = document.getElementById("cleanBox");
 const btnCleanContent = document.getElementById("cleanContent")
@@ -129,6 +131,7 @@ const buttonCalculateDiscountCoupons = () => {
 
   const youSaveTheAmountOf = document.getElementById("youSaveTheAmountOf");
   youSaveTheAmountOf.innerText = `Te ahorraste: $ ${youSave.toFixed(2)}`;
+
 }
 
 const cleanBox = () => {
@@ -170,3 +173,4 @@ const close = () => {
 btnClose.addEventListener('click', close);
 btnCleanBox.addEventListener('click', cleanBox);
 btnCleanContent.addEventListener('click', cleanContent)
+btnCalculateDiscountCoupons.addEventListener('click', buttonCalculateDiscountCoupons)

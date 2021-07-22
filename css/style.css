@@ -72,10 +72,13 @@ header {
   color: #0f0f0f;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 60px;
-  font-family: "vorname";
-  position: relative;
-  top: 2px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 4rem;
+  font-weight: 900;
+  /* font-size: 60px;
+  font-family: "vorname"; */
+  /* position: relative;
+  top: 2px; */
 }
 
 .toggler img{

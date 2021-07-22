@@ -19,13 +19,14 @@ header{
   color: #0b0c0c;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 90px;
-  display: contents;
+  font-size: 6rem;
+  /* font-size: 90px; */
+  /* display: contents; */
   position: relative;
   left: 20px;
   /* bottom: 8; */
   /* margin-bottom: 20px; */
-  padding-bottom: 18px;
+  /* padding-bottom: 18px; */
   /* top: 26px; */
 }
 

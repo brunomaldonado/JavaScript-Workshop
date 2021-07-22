@@ -20,7 +20,8 @@ header{
   color: #141414;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 80px;
+  font-size: 5rem;
+  /* font-size: 80px; */
   position: relative;
   left: 20px;
 }

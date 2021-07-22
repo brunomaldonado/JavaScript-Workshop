@@ -43,7 +43,7 @@
         <h2>Calcula el precio a pagar de tus productos con descuento</h2>
         <div class="main-products__container">
           <img src="./assets/shoppingcart.png" alt="shoppingcart">
-          <form action="#" id="form-container" class="form-container">
+          <form onsubmit="return false" action="#" id="form-container" class="form-container">
             <div class="inputBox">
               <input id="inputPrice" type="number" required="required">
               <span>Precio:</span>
@@ -53,7 +53,8 @@
               <span>Descuento:</span>
             </div>
             <div class="form-container__buttons">
-              <button class="buttonBox" type="button" onclick="buttonCalculateDiscountPrice()">Calcular</button>
+              <!-- <button class="buttonBox" type="button" onclick="buttonCalculateDiscountPrice()">Calcular</button> -->
+              <input class="buttonBox" type="submit" value="Calcular" onclick="buttonCalculateDiscountPrice()"></input>
               <button class="buttonBox" id="cleanBox" type="button">clear</button>
             </div>
             <div id="totalPrice" class="totalPrice">
@@ -68,7 +69,7 @@
       <div id="product-content1" class="main-products">
         <h2>Calcula el precio a pagar del producto con cupones especiales</h2>
         <div class="main-products__container">
-          <form action="#" id="form-container" class="form-container">
+          <form onsubmit="return false" action="#" id="form-container" class="form-container">
             <div class="inputBox">
               <input id="couponsInputPrice" type="number" required="required">
               <span>Precio:</span>
@@ -87,7 +88,8 @@
               </select>
             </div>
             <div class="form-container__buttons">
-              <button class="buttonBox" type="button" onclick="buttonCalculateDiscountCoupons()">Calculate</button>
+              <!-- <button class="buttonBox" type="button" onclick="buttonCalculateDiscountCoupons()">Calculate</button> -->
+              <input class="buttonBox" type="submit" value="Calculate" id="buttonCalculateDiscountCoupons"></input>
               <button class="buttonBox" id="cleanContent" type="button">clear</button>
             </div>
           </form>

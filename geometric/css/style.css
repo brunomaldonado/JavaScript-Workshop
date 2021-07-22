@@ -54,10 +54,13 @@ header {
   color: #0f0f0f;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 70px;
-  font-family: "vorname";
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 4rem;
+  font-weight: 900;
+  /* font-size: 70px; */
+  /* font-family: "vorname";
   position: relative;
-  top: 2px;
+  top: 2px; */
 }
 
 .toggler img{
@@ -174,16 +177,13 @@ main{
 
 .main-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   flex-direction: column;
   border: 2px solid rgb(182, 181, 179);
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.2);
   background-color: rgba(255, 255, 255, 0.61);
   margin: 10px;
-  /* width: 90%; */
-  /* min-width: 250px; */
   max-width: 360px;
   font-family: 'IBM Plex Sans', sans-serif;
   /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
@@ -193,9 +193,7 @@ main{
 #square-content,
 #triangle-content,
 #circle-content {
-  /* width: 90%; */
   position: absolute;
-  /* max-width: 360px; */
 }
 
 .main-container--title {
@@ -207,18 +205,14 @@ main{
 .form-container--title {
   font-size: 1.5rem;
   font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
 }
 
 .form-container--card {
   display: flex;
   justify-content: space-between;
-}
-
-.main-container{
-  max-width: 400px;
+  margin-right: 15px;
+  margin-left: 25px;
 }
 
 input[type="number"] {
@@ -253,34 +247,22 @@ input[type="number"]:focus {
   font-weight: bold;
 }
 
-.form-container--right button {
-  padding: 3px;
-  border-radius: 10px;
-  font-weight: bold;
-  line-height: 2;
-  border: none;
-  cursor: pointer;
-  background-color: rgba(27, 27, 27, 0.2);
-  background-color: rgba(255, 255, 255, 0.349);
-}
-
-
 .form-container--right {
   display: flex;
   flex-direction: column;
-  font-size: 1.4rem;
 }
 
-.form-container--right button {
+.form-container--button{
+  display: flex;
+  justify-content: center;
   position: relative;
   top: 15px;
-  padding: 3px;
+  width: 120px;
+  font-size: 1.4rem;
+  padding: 5px;
   margin: 3px;
   border-radius: 10px;
   font-weight: 800;
-  width: 120px;
-  font-size: 1.2rem;
-  line-height: 2;
   border: none;
   cursor: pointer;
   background-color: rgba(27, 27, 27, 0.2);
@@ -324,7 +306,7 @@ input[type="number"]:focus {
   right: calc(100% - 20px);
 }
 
-/* end square */
+/* end square */ 
 
 .form-container--top{
   display: flex;
@@ -332,6 +314,7 @@ input[type="number"]:focus {
   align-items: center;
   flex-direction: row;
   margin-top: 10px;
+  text-align: center;
 }
 
 .form-container--top input{
@@ -342,25 +325,18 @@ input[type="number"]:focus {
   margin: 3px;
 }
 
-
-.form-container--sideRight {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-container--sideRight button {
+.form-container--buttonTr{
   display: flex;
   justify-content: center;
   position: relative;
-  top: 10px;
-  left: calc(75% - 55px);
+  top: 15px;
+  left: calc(60%);
   width: 120px;
-  font-size: 1.2rem;
-  padding: 3px;
-  margin: 3px;
+  font-size: 1.4rem;
+  padding: 5px;
+  margin: 5px;
   border-radius: 10px;
   font-weight: 800;
-  line-height: 2;
   border: none;
   cursor: pointer;
   background-color: rgba(27, 27, 27, 0.2);
@@ -373,11 +349,23 @@ input[type="number"]:focus {
   margin-left: 5px;
 }
 
-.return {
-  background-image: url(../assets/angle-double-left-solid.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  color: transparent;
+.form-container--button__return {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.5);
+  font-size: 2.0rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 50%;
+  font-family: monospace;
+  cursor: pointer;
+  position: relative;
+  top: 25px;
+  left: calc(80% - 55px);
+}
+
+.form-container--button__return:hover {
+  background: rgba(255, 255, 255, 1);
 }
 
 .form-container--triangle {
@@ -418,7 +406,7 @@ input[type="number"]:focus {
   border-right: 100px solid transparent;
   position: relative;
   left: calc(50% - 50px);
-  margin-top: 5px;
+  margin-top: 25px;
   text-align: center;
   font-size: 1.4rem;
 }
@@ -431,7 +419,6 @@ input[type="number"]:focus {
 
 .form-container--triangleArea .b {
   position: inherit;
-  /* top: calc(55%); */
   right: calc(35% - 45px);
 }
 
@@ -443,40 +430,12 @@ input[type="number"]:focus {
 
 /* end triangle */
 
-.form-container--cardCircle{
-  display: flex;
-  gap: 80px;
-}
-
 .form-container--leftCircle input{
   margin-top: 10px;
   width: 90px;
   padding: 3px;
   transition: 1s all;
   margin-bottom: 13px;
-}
-
-.form-container--rightCircle {
-  display: flex;
-  flex-direction: column;
-  margin-top: 25px;
-}
-
-.form-container--rightCircle button{
-  padding: 3px;
-  border-radius: 10px;
-  margin: 3px;
-  line-height: 2;
-  border: none;
-  cursor: pointer;
-  background-color: rgba(27, 27, 27, 0.2);
-  background-color: rgba(255, 255, 255, 0.349);
-  font-weight: 800;
-  font-size: 1.2rem;
-}
-
-.circle-boxCircumferenceTwo{
-  margin: 2px 10px ;
 }
 
 .circle {
@@ -486,7 +445,7 @@ input[type="number"]:focus {
   border-radius: 100px;
   position: relative;
   top: 28px;
-  left: calc(35% - 50px);
+  left: calc(50% - 50px);
   margin-bottom: 15px;
   font-size: 1.5rem;
   text-align: center;
@@ -515,7 +474,7 @@ input[type="number"]:focus {
   color: transparent;
   transition: transform .5s;
   position: relative;
-  left: calc(44%);
+  left: calc(90%);
   bottom: calc(5px);
   width: 30px;
   height: 30px;
@@ -558,16 +517,16 @@ input[type="number"]:focus {
   padding: 5px;
   border: 2px solid rgba(231, 174, 174, 0.671);
   border-radius: 10px;
-  margin-top: 20px;
+  margin-top: 8px;
   width: 90%;
-  height: 90%;
+  height: 91%;
   background: rgba(255, 255, 255, 0.959);
   
 }
 
 .close {
   position: absolute;
-  top: 25px;
+  top: 15px;
   right: 25px;
   display: inline-block;
   width: 20px;

@@ -70,10 +70,13 @@ header {
   color: #111111;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 70px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 4rem;
+  font-weight: 900;
+  /* font-size: 70px;
   font-family: "vorname";
   position: relative;
-  top: 2px;
+  top: 2px; */
 }
 
 .toggler img {
@@ -169,8 +172,8 @@ main {
 .main-products {
   border: 2px solid rgb(224, 221, 214);
   border-radius: 10px;
-  /* background-color: rgba(0, 0, 0, 0.2);
-  background-color: rgba(255, 255, 255, 0.61); */
+  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.61);
   width: 90%;
   min-width: 235px;
   max-width: 360px;
