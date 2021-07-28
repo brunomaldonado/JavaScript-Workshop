@@ -1,0 +1,252 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+html{
+  font-size: 62.5%;
+  background: rgba(63, 64, 65, 0.959);
+  background-image: url(../images/0008.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* START MENU BAR */
+
+header {
+  width: 100%;
+  height: 50px;
+
+  /* background-color: #2F2F2F; */
+  /* background: linear-gradient(25deg, #a0d9db, #69eaf3); */
+  background-image: url(../images/0008.jpg);
+  background-size: cover;
+  position: relative;
+  z-index: 999;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+.content a{
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+
+.logo {
+  color: #0f0f0f;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 4rem;
+  font-weight: 900;
+  /* font-size: 60px;
+  font-family: "vorname"; */
+  /* position: relative;
+  top: 2px; */
+}
+
+.toggler img{
+  color: #0d0d0e;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  width: 25px;
+}
+
+/* START NAVIGATION */
+nav {
+  width: 100%;
+  display: none;
+  /* background-color: #436066; */
+  background: linear-gradient(25deg, #cbe8e9, #69d3f3);
+  background-image: url(../images/11731.jpg);
+  background-size: cover;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #141414;
+  font-size: 18px;
+  line-height: 40px;
+  transition: 0.3s ease-out;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+
+}
+
+nav ul li a:hover {
+  color: #0e0ae2;
+}
+
+.active {
+  color: #141414;
+}
+
+main{
+  width: 100%;
+  height: 100vh;
+  font-family: 'Karla', sans-serif;
+
+}
+.main-title{
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 35px;
+  margin-bottom: 25px;
+  font-size:2rem;
+}
+
+.form-container{
+  max-width: 360px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.61);
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  
+}
+
+.form-container--top{
+  align-self: center;
+  margin-bottom: 10px;
+}
+
+.form-container--title{
+  display: flex;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+input[type="number"] {
+  border: 2px solid rgb(231, 223, 207);
+  border-radius: 10px;
+  outline: none;
+  background-color: inherit;
+  color: rgb(14, 14, 14);
+  font-size: 1.8rem;
+  transition: 0.3s;
+  text-align: center;
+}
+
+input[type="number"]:focus {
+  border-color: rgb(30, 45, 255);
+  box-shadow: 0 0 8px 0 rgb(30, 83, 255);
+}
+
+.form-container--input{
+  text-align: center;
+  width: 100px;
+  padding: 5px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+}
+.form-container--shownumber{
+  font-size: 2rem;
+  color: rgb(2, 31, 31);
+  font-weight: 500;
+  height: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.form-container--button{
+  width: 60px;
+  margin-bottom: 25px;
+  text-align: center;
+  align-self: center;
+  font-size: 1.6rem;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgba(27, 27, 27, 0.2);
+  background-color: rgba(255, 255, 255, 0.664);
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.form-container--output{
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.form-container--card{
+  border: 2px solid rgb(234, 247, 234);
+  width: 140px;
+  height: 60px;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.form-container--card span{
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  position: relative;
+  bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.61);
+  font-weight: 600;
+  padding: 3px;
+  border-radius: 5px;
+  
+}
+
+.form-container--result{
+  font-size: 3rem;
+  text-align: left;
+  position: relative;
+  left: 25px;
+  font-weight: 700;
+}
+
+.form-container--result__element{
+  display: block;
+  font-size: 1.6rem;
+  text-align: center;
+  position: relative; 
+  left: 35px; 
+  bottom: 22px;
+  color: rgb(2, 31, 31);
+  font-weight: 700;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  font-size: 1.4rem;
+  font-weight: bold;
+}

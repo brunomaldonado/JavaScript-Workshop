@@ -170,7 +170,6 @@ main {
 }
 
 .main-products {
-  border: 2px solid rgb(224, 221, 214);
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.2);
   background-color: rgba(255, 255, 255, 0.61);
@@ -182,7 +181,7 @@ main {
   font-family: 'IBM Plex Sans', sans-serif;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   transition: 0.3s;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 
@@ -202,10 +201,10 @@ main {
 }
 
 .form-container {
-  /* display: flex;
+  display: flex;
   flex-direction: column;
-  align-items: center; */
-  margin-top: 10px;
+  align-items: center;
+  margin-top: 15px;
 }
 
 input[type="number"] {
@@ -228,7 +227,7 @@ input[type="number"]:focus {
 /* input */
 .form-container .inputBox {
   position: relative;
-  left: calc(50% - 50px);
+  left: calc(25% - 100px);
   height: 25px;
   margin-bottom: 15px;
 }
@@ -241,10 +240,11 @@ input[type="number"]:focus {
   position: absolute;
   top: 0;
   left: 0;
-  width: 60%;
+  width: 95px;
   background: transparent;
   outline: none;
   text-align: center;
+
 }
 
 .form-container .inputBox span {
@@ -271,7 +271,24 @@ input[type="number"]:focus {
   background-color: transparent;
 }
 
-.form-container .buttonBox {
+.form-container--couponsButton{
+  display: flex;
+  gap: 10px;
+}
+
+.form-container .form-container--buttonCoupons{
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px;
+  width: 99px;
+  font-size: 1.4rem;
+  margin: 5px 0px 15px 0px;
+  border: 2px solid rgba(172, 177, 180, 0.979); 
+}
+
+.form-container .form-container--button {
   border-radius: 10px;
   border: none;
   font-weight: bold;
@@ -280,21 +297,16 @@ input[type="number"]:focus {
   width: 80px;
   font-size: 1.4rem;
   margin: 5px 0px 15px 0px;
-  border: 2px solid rgba(172, 177, 180, 0.979);
-}
-
-.form-container__buttons {
-  display: flex;
-  gap: 10px;
-
+  border: 2px solid rgba(172, 177, 180, 0.979); 
 }
 
 .totalPrice {
   border: 2px solid rgb(238, 224, 224);
   text-align: center;
+  width: 170px;
   height: 60px;
   border-radius: 8px;
-  margin: 5px 0px 25px 0px;
+  margin: 10px 0px 25px 0px;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
@@ -315,33 +327,65 @@ input[type="number"]:focus {
   font-weight: bold;
 }
 
+
 /* la parte de cupones de producto */
 
+input[type="text"] {
+  border: 2px solid rgb(231, 223, 207);
+  border-radius: 10px;
+  outline: none;
+  background-color: inherit;
+  color: rgb(14, 14, 14);
+  font-size: 1.6rem;
+  font-weight: bold;
+  transition: .3s all;
+}
+
+input[type="text"]:focus {
+  border-color: rgb(30, 45, 255);
+  box-shadow: 0 0 8px 0 rgb(30, 83, 255);
+}
+
+/* side of coupons */
 .form-container__coupons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.8rem;
-  margin: 5px 0px 5px 0px;
+  margin: 5px 0px 12px 0px;
 }
 
 .form-container__coupons select {
+  border: none;
   font-size: 1.4rem;
   border-radius: 8px;
   padding: 3px;
 }
 
-.form-container .buttonCoupons {
-  border-radius: 10px;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  padding: 5px;
-  width: 120px;
-  font-size: 1.5rem;
-  color: var(--black);
-  position: relative;
-  left: calc(50% - 50px);
-  border: 2px solid rgba(172, 177, 180, 0.979);
+/* input coupons */
+.form-container__coupons--input input{
+  width: 100px;
+  background: transparent;
+  outline: none;
+  text-align: center;
+  margin-left: 10px;
+  padding: 4px;
+  /* height: 25px; */
 }
 
+.form-container--btnShowCoupons{
+  border: none;
+  cursor: pointer;
+  padding: 3px;
+  border-radius: 5px;
+  font-weight: 700;
+  background-color: rgba(27, 27, 27, 0.2);
+  background-color: rgba(255, 255, 255, 0.664);
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+
+/* card container product */
 
 .card-container-product {
   display: flex;
@@ -426,6 +470,69 @@ input[type="number"]:focus {
   border: transparent;
   cursor: pointer;
 }
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  position: absolute;
+  transition: opacity 0.5s ease 0.5;
+  /* background-color: rgba(27, 27, 27, 0.2);
+  background-color: rgba(255, 255, 255, 0.349); */
+  transition: .3s all;
+}
+
+.modal-content {
+  /* background-color: #fefefe; */
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 5px;
+  border: 2px solid rgba(236, 233, 233, 0.671);
+  border-radius: 10px;
+  margin-top: 60px;
+  width: 70%;
+  height: 20%;
+  background: rgba(255, 255, 255, 0.959);
+  
+}
+
+.modal-content--title{
+  padding: 5px;
+  font-size: 1.6rem;
+  margin-bottom: 3px;
+}
+.modal-content--coupons{
+  text-align: center;
+  font-size: 1.8rem;
+  color: rgb(39, 39, 43);
+  font-weight: 700;
+}
+
+.closeBanner {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(245, 8, 8);
+  color: rgb(235, 238, 232);
+  border-radius: 50%;
+  /* background-image: url(../images/close/error.svg); */
+  color: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+
+
+
 
 footer {
   width: 100%;

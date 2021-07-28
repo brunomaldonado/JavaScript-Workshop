@@ -15,6 +15,9 @@ const totalToPay = document.getElementById("totalToPay");
 const productContent = document.getElementById("product-content");
 const productContent1 = document.getElementById("product-content1")
 
+const btnShowCoupons = document.getElementById("showCoupons")
+const myModal = document.getElementById("myModal")
+
 const btnCouponsProducts = () => {
   productContent1.style.display = 'block';
   productContent.style.display = 'none';
@@ -61,66 +64,85 @@ const buttonCalculateDiscountPrice = () => {
 
 }
 
+// con valor de entrada input .- Solución #2: legibilidad, error first y muerte al switch
+const mayus = (e) => e.value = e.value.toUpperCase();
 
-// con valor de entrada input
-// const validateCouponsInput = () => {
-//   const coupons = [10, 25, 50];
-//   const inputCoupon = document.getElementById("inputCoupon");
-//   const couponValue = parseFloat(inputCoupon.value);
-
-//   if (!coupons.includes(couponValue)) {
-//     console.log(`The coupons ${couponValue} is invalid!`);
-//   }else if(couponValue === coupons[0]){
-//     console.log("cupon valido 10");
-//     return coupons[0];
-//   }else if(couponValue === coupons[1]){
-//     console.log("cupon valido 25");
-//     return coupons[1];
-//   }else if(couponValue === coupons[2]){
-//     console.log("cupon valido 50");
-//     return coupons[2];
-//   }else{
-//     return 0;
-//   }
-// }
-
-//con menu selector
-const confirmCoupons = function () {
-  const coupons = [10, 25, 50];
+const validateCouponsInput = () => {
+  const coupons = [10, 25, 50, "BUMR09", "BUMR08", "BUMR07"];
   const selectCoupons = document.getElementById("selectCoupons");
-  const couponValue = parseFloat(selectCoupons.value);
+  const couponValues = parseFloat(selectCoupons.value);
+  const inputCoupon = document.getElementById("inputCoupons");
+  const couponValue = (inputCoupon.value);
+  let discount;
 
-  // const percentDiscount = document.getElementById("percentDiscount");
-  // percentDiscount.innerText = `-${couponValue}%`;
+  // if (couponValues ¿¿) {
+    
+  // }
 
-  if (couponValue === coupons[0]) {
-    console.log("cupon valido 10");
+  if (!coupons.includes(couponValue)) {
+    // alert("invalid! coupons");
+    inputCoupon.disabled = false;
+    selectCoupons.disabled = true;
+    document.getElementById("inputCoupons").value = "";
+    console.log(`The coupons ${couponValue} is invalid!`);
+  }else if(couponValue === 'BUMR09'){
+    discount = 10;
+    return discount;
+  }else if(couponValue === "BUMR08"){
+    discount = 25;
+    return discount;
+  }else if(couponValue === "BUMR07"){
+    discount = 50;
+    return discount;
+  }else{
+    return 0;
+  }
+
+  if (couponValues === coupons[0]) {
+    inputCoupon.disabled = true;
     return coupons[0];
-  } else if (couponValue === coupons[1]) {
-    console.log("cupon valido 25");
+  } else if (couponValues === coupons[1]) {
+    inputCoupon.disabled = true;
     return coupons[1];
-  } else if (couponValue === coupons[2]) {
-    console.log("cupon valido 50");
+  } else if (couponValues === coupons[2]) {
+    inputCoupon.disabled = true;
     return coupons[2];
   } else {
     return 0;
   }
 }
 
+//con menu selector
+// const confirmCouponsSelect = () => {
+//   const coupons = [10, 25, 50];
+//   const selectCoupons = document.getElementById("selectCoupons");
+//   const couponValue = parseFloat(selectCoupons.value);
+
+//   if (couponValue === coupons[0]) {
+//     return coupons[0];
+//   } else if (couponValue === coupons[1]) {
+//     return coupons[1];
+//   } else if (couponValue === coupons[2]) {
+//     return coupons[2];
+//   } else {
+//     return 0;
+//   }
+// }
+
 const buttonCalculateDiscountCoupons = () => {
   const inputPrice = document.getElementById("couponsInputPrice")
   const priceValue = parseFloat(inputPrice.value)
   const inputDiscount = document.getElementById("couponsInputDiscount")
   const discountValue = parseFloat(inputDiscount.value);
-  const validateCoupons = confirmCoupons();
-  const discountCoupons = discountValue + validateCoupons;
+  // const validateCouponsSel = confirmCouponsSelect();
+  const validateCouponsInp = validateCouponsInput();
+  const discountCoupons = discountValue + validateCouponsInp;
 
   const PriceWithDiscount = calculateDiscountPrice(priceValue, discountCoupons);
   const youSave = whatYouSave(priceValue, discountCoupons);
 
   const percentDiscount = document.getElementById("percentDiscount");
   percentDiscount.innerText = `-${discountCoupons}%`; 
-   console.log(discountCoupons);
 
   const originalPrice = document.getElementById("originalPrice");
   const price = priceValue;
@@ -148,8 +170,12 @@ const cleanContent = () => {
   document.getElementById("originalPrice").innerHTML = `$0000`;
   document.getElementById("priceDiscount").innerHTML = `$0000`;
   document.getElementById("youSaveTheAmountOf").innerHTML = "";
+  document.getElementById("inputCoupons").value = "";
 
   console.log("clean content")
+  selectCoupons.disabled = false;
+  inputCoupon.disabled = false;
+
 }
 
 const close = () => {
@@ -166,7 +192,16 @@ const close = () => {
 
   productContent1.style.display = 'none';
   productContent.style.display = 'block';
+}
 
+const closeBanner = () => {
+  console.log("closeBanner")
+  myModal.style.display = 'none';
+}
+
+const showCoupons = () => {
+  console.log("Show Coupons")
+  myModal.style.display = 'block';
 }
 
 //Evenst Listener
@@ -174,3 +209,4 @@ btnClose.addEventListener('click', close);
 btnCleanBox.addEventListener('click', cleanBox);
 btnCleanContent.addEventListener('click', cleanContent)
 btnCalculateDiscountCoupons.addEventListener('click', buttonCalculateDiscountCoupons)
+btnShowCoupons.addEventListener('click', showCoupons)

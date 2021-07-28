@@ -26,7 +26,7 @@
           <li><a class="acrive" href="../index.html">Home</a></li>
           <li><a href="../geometric/index.html">Workshop #1</a></li>
           <li><a href="#">Workshop #2</a></li>
-          <li><a href="">Workshop #3</a></li>
+          <li><a href="../promedio-media-mediana/index.html">Workshop #3</a></li>
         </ul>
       </nav>
     </div>
@@ -52,16 +52,15 @@
               <input id="inputDiscount" type="number" required="required">
               <span>Descuento:</span>
             </div>
-            <div class="form-container__buttons">
-              <!-- <button class="buttonBox" type="button" onclick="buttonCalculateDiscountPrice()">Calcular</button> -->
-              <input class="buttonBox" type="submit" value="Calcular" onclick="buttonCalculateDiscountPrice()"></input>
-              <button class="buttonBox" id="cleanBox" type="button">clear</button>
+            <div class="form-container--couponsButton">
+              <input class="form-container--button" type="submit" value="Calcular" onclick="buttonCalculateDiscountPrice()"></input>
+              <button class="form-container--button" id="cleanBox" type="button">clear</button>
             </div>
             <div id="totalPrice" class="totalPrice">
               <span>Con descuento son:</span>
               <p id="totalToPay"></p>
             </div>
-            <button class="buttonCoupons" type="button" onclick="btnCouponsProducts()">Cupones especiales</button>
+            <button class="form-container--buttonCoupons" type="button" onclick="btnCouponsProducts()">Cupones especiales</button>
           </form>
         </div>
       </div>
@@ -79,18 +78,33 @@
               <span>Descuento:</span>
             </div>
             <div class="form-container__coupons">
-              <label for="selectCoupons">Cupones:</label>
+              <label for="selectCoupons">Cupon:</label>
               <select name="selectCoupons" name="selectCoupons" id="selectCoupons">
                 <option value="0">------</option>
                 <option value="10">-10%</option>
                 <option value="25">-25%</option>
                 <option value="50">-50%</option>
               </select>
+              <div id="input" class="form-container__coupons--input">
+                <input id="inputCoupons" onkeyup="mayus(this)" type="text" placeholder="Cupones" required="required" disabled>
+                <button class="form-container--btnShowCoupons" id="showCoupons">Here</button>
+                
+              </div>
             </div>
-            <div class="form-container__buttons">
-              <!-- <button class="buttonBox" type="button" onclick="buttonCalculateDiscountCoupons()">Calculate</button> -->
-              <input class="buttonBox" type="submit" value="Calculate" id="buttonCalculateDiscountCoupons"></input>
-              <button class="buttonBox" id="cleanContent" type="button">clear</button>
+            <div class="form-container--couponsButton">
+              <input class="form-container--button" type="submit" value="Calculate" id="buttonCalculateDiscountCoupons"></input>
+              <button class="form-container--button" id="cleanContent" type="button">clear</button>
+            </div>
+            <div id="myModal" class="modal">
+              <div class="modal-content">
+                <span id="closeBanner" class="closeBanner" onclick="closeBanner()"></span>
+                <h1 class="modal-content--title">Cupones disponibles</h1>
+                <!-- <div class="modal-content--coupon"> -->
+                <p class="modal-content--coupons">BUMR09</p>
+                <p class="modal-content--coupons">BUMR08</p>
+                <p class="modal-content--coupons">BUMR07</p>
+                <!-- </div> -->
+              </div>
             </div>
           </form>
         </div>
