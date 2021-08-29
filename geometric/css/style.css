@@ -13,6 +13,8 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  /* width: 100%;
+  height: 200%; */
 }
 
 @font-face {
@@ -28,14 +30,14 @@ html {
 /* START MENU BAR */
 
 header {
-  width: 100%;
+  width: 100vw;
   height: 50px;
   /* background-color: #2F2F2F; */
   /* background: linear-gradient(25deg, #a0d9db, #69eaf3); */
   background-image: url(../images/0008.jpg);
   background-size: cover;
   position: relative;
-  /* position: fixed; */
+  position: fixed;
   z-index: 999;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -141,15 +143,16 @@ nav ul li a:hover {
   font-size: 2.2rem;
   line-height: 1;
   font-weight: 800;
-  margin: 25px 0px 15px 0px;
-
+  position: relative;
+  top: 75px;
 }
 
 .opcionMenu {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  flex-wrap: wrap;
+  position: relative;
+  top: 89px;
 }
 
 .menuButtons {
@@ -168,30 +171,33 @@ nav ul li a:hover {
 }
 
 main{
-  display:flex;
+  display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh; 
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  /* overflow-Y: hidden; */
+  margin: 0 auto;
 }
 
 .main-container {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  flex-wrap: wrap;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.2);
   background-color: rgba(255, 255, 255, 0.61);
-  margin: 10px;
   max-width: 360px;
   font-family: 'IBM Plex Sans', sans-serif;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-}
-
-#square-content,
-#triangle-content,
-#circle-content {
-  position: absolute;
+  position: relative;
+  top: 85px;
+  scroll-snap-align: center;
+  margin: 10px;
 }
 
 .main-container--title {
@@ -516,8 +522,8 @@ input[type="number"]:focus {
   border: 2px solid rgba(231, 174, 174, 0.671);
   border-radius: 10px;
   margin-top: 8px;
-  width: 90%;
-  height: 91%;
+  width: 95%;
+  height: 96%;
   background: rgba(255, 255, 255, 0.959);
   
 }
@@ -525,7 +531,7 @@ input[type="number"]:focus {
 .close {
   position: absolute;
   top: 15px;
-  right: 25px;
+  right: 15px;
   display: inline-block;
   width: 20px;
   height: 20px;

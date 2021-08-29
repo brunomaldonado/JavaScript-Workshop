@@ -13,7 +13,7 @@ html{
   background-size: cover;
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 /* START MENU BAR */
@@ -26,9 +26,10 @@ header {
   /* background: linear-gradient(25deg, #a0d9db, #69eaf3); */
   background-image: url(../images/0008.jpg);
   background-size: cover;
-  position: relative;
+  position: fixed;
   z-index: 999;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 0 auto;
 }
 
 
@@ -109,12 +110,13 @@ main{
 
 }
 .main-title{
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
   text-align: center;
-  margin-top: 35px;
   margin-bottom: 25px;
   font-size:2rem;
+  position: relative;
+  top: 85px;
 }
 
 .form-container{
@@ -128,7 +130,8 @@ main{
   background-color: rgba(255, 255, 255, 0.61);
   border-radius: 10px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  
+  position: relative;
+  top: 95px;
 }
 
 .form-container--top{
@@ -149,7 +152,7 @@ input[type="number"] {
   outline: none;
   background-color: inherit;
   color: rgb(14, 14, 14);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   transition: 0.3s;
   text-align: center;
 }
@@ -169,7 +172,7 @@ input[type="number"]:focus {
 }
 .form-container--shownumber{
   font-size: 2rem;
-  color: rgb(2, 31, 31);
+  color: #0f0f0f;
   font-weight: 500;
   height: 25px;
   display: flex;
@@ -196,7 +199,6 @@ input[type="number"]:focus {
 
 .form-container--output{
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;

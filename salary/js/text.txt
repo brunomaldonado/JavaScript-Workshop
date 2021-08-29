@@ -1,0 +1,31 @@
+const inputData = document.getElementById("inputData");
+const showTotalData = document.getElementById("total")
+const inputNetflix = document.getElementById("netflix");
+const inputAmazon = document.getElementById("prime");
+const inputEthernet = document.getElementById("ethernet");
+const showData = document.getElementById("showData")
+
+const data = [];
+
+inputData.addEventListener('keyup', function (e){
+    console.log(e.target.value)
+    showTotalData.innerHTML = e.target.value;
+}, false);
+
+inputNetflix.addEventListener('keyup', function (e){
+    console.log(e.target.value)
+    data.push(e.target.value);
+    showData.innerHTML = e.target.value;
+}, false);
+
+inputAmazon.addEventListener('keyup', function (e){
+    console.log(e.target.value)
+    data.push(e.target.value);
+    showData.innerHTML = e.target.value;
+}, false);
+
+inputEthernet.addEventListener('keyup', function (e){
+    console.log(e.target.value)
+    data.push(e.target.value);
+    showData.innerHTML = e.target.value;
+}, false)

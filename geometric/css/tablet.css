@@ -19,7 +19,7 @@ header{
   color: #141414;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 5rem;
+  font-size: 4rem;
   /* font-size: 80px; */
   position: relative;
   left: 20px;
@@ -37,10 +37,8 @@ nav {
   float: right;
   background-color: transparent;
   border-radius: 20px;
-  /* background: linear-gradient(25deg, #cbe8e9, #69d3f3); */
   background-image: url(../images/0008.jpg);
   background-size: cover;
-  
 }
 
 nav ul {
@@ -49,7 +47,6 @@ nav ul {
 }
 
 nav ul li {
-  /* display: inline-block; */
   padding-right: 20px;
   transition: all .5s;
 }
@@ -64,27 +61,34 @@ nav ul li {
   font-family: "designer";
   font-size: 3rem;
   font-weight: 800;
-  margin: 5px 0px 35px 0px;
+  position: relative;
+  top: 3px;
 }
 
 .menuButtons {
   font-size: 1.4rem;
   width: 90px;
   margin: 8px;
-  margin-bottom: 5px;
   padding: 8px;
+  position: relative;
+  bottom: 85px;
 }
 
 main{
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-direction: row;
+  justify-content: center;
+  /* align-items: center; */
+  width: 100vw;
+  height: 100vh; 
+  overflow: auto;
 }
 
 .main-container{
   max-width: 400px;
-  margin: 20px;
+  position: relative;
+  top: 5px;
 }
-j
 
 input[type="number"] {
   border: 2px solid rgb(231, 223, 207);
@@ -212,8 +216,8 @@ input[type="number"] {
   border: 2px solid rgba(231, 174, 174, 0.671);
   border-radius: 10px;
   margin-top: 8px;
-  width: 86%;
-  height: 87%;
+  width: 98%;
+  height: 96%;
   background: rgba(255, 255, 255, 0.959);
 
 }
@@ -221,7 +225,7 @@ input[type="number"] {
 .close {
   position: absolute;
   top: 14px;
-  right: 37px;
+  right: 10px;
   display: inline-block;
   width: 20px;
   height: 20px;

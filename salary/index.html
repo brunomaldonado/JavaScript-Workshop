@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="">
+  <title>Salary</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 500px">
+</head>
+
+<body>
+
+  <main>
+    <h3>Gastos promedio y la Capacidad de ahorro e inversion</h3>
+    <form onsubmit="return false" action="#" class="form-container">
+      <div>
+        <input class="form-container--input" id="salary" type="number" placeholder="salary" required="required">
+      </div>
+      <span class="form-card--title">Expenses</span>
+      <div class="form-card--container__box">
+        <div class="form-card--container">
+          <input class="form-container--input" id="netflix" type="number" placeholder="netflix">
+          <input class="form-container--input" id="prime" type="number" placeholder="prime">
+          <input class="form-container--input" id="ethernet" type="number" placeholder="ethernet">
+          <input class="form-container--input" id="phone" type="number" placeholder="Phone Cel.">
+        </div>
+
+        <div class="form-card--container">
+          <input class="form-container--input" type="number" name="" id="rent" placeholder="rent">
+          <input class="form-container--input" type="number" name="" id="transport"
+            placeholder="transport or car(gasoline)">
+          <input class="form-container--input" type="number" name="" id="food" placeholder="food">
+          <input class="form-container--input" type="number" name="" id="vestment" placeholder="vestment">
+        </div>
+
+        <div class="form-card--container">
+          <input class="form-container--input" type="number" name="" id="movies" placeholder="cinepolis">
+          <input class="form-container--input" type="number" name="" id="trip" placeholder="trip">
+          <input class="form-container--input" type="number" name="" id="debt" placeholder="debt">
+          <input class="form-container--input" type="number" name="" id="infonavit" placeholder="infonavit">
+        </div>
+      </div>
+
+      <input class="form-container--button" id="netTotal" type="submit" value="net total">
+      <p class="form-container--result" id="total"></p>
+    </form>
+
+    <div class="">
+      <h3>Disposicion del ahorro</h3>
+      <form onsubmit="return false" name="saveMoney" action="#" class="form-container">
+        <input class="form-container--input" type="number" name="amountMoney" id="saveMoney" placeholder="Cap. ahorro">
+        <input type="submit" value="Guardar" id="save"></input>
+        <label class="form-card--container--saveMoney" for="selectMonth">Capital neto, meses y anios</label>
+        <select name="selectMonth"id="selectMonth">
+          <option value="3" >3 (meses)</option>
+          <option value="6">6 (medio anio)</option>
+          <option value="12" selected>12 (un anio)</option>
+          <option value="18">18 (1.5 anios)</option>
+          <option value="24">2 (2 anios)</option>
+          <option value="30">2.5 (anios)</option>
+          <option value="36">3 (anios)</option>
+          <option value="60">5 (anios)</option>
+        </select>
+        <input type="number" id="drawout" name="drawOut" placeholder="Cantidad">
+        <input type="submit" value="Retirar" id="withdrawals"></input>
+        <p class="form-container--result" id="showSaveMoney"></p>
+      </form>
+    </div>
+  </main>
+
+
+  <!-- <script src="./js/salary.js"></script> -->
+  <!-- <script src="./js/analysis.js"></script> -->
+  <script src="./js/test.js"></script>
+</body>
+
+</html>

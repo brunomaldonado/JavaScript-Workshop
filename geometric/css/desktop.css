@@ -3,7 +3,7 @@ header{
   height: 60px;
   margin: 0 auto;
   border-radius: 20px;
-  position: relative;
+  /* position: relative; */
   top: 10px;
 }
 
@@ -19,7 +19,7 @@ header{
   color: #0b0c0c;
   text-transform: uppercase;
   text-decoration: none;
-font-size: 6rem;
+font-size: 5rem;
   /* font-size: 90px; */
   position: relative;
   left: 20px;
@@ -56,7 +56,8 @@ nav ul li {
   font-family: "designer";
   font-size: 3.6rem;
   font-weight: 800;
-  margin: 5px 0px 35px 0px;
+  margin-bottom: 25px;
+  /* margin: 5px 0px 35px 0px; */
 }
 
 .menuButtons {
@@ -64,25 +65,27 @@ nav ul li {
   width: 90px;
   margin: 8px;
   padding: 8px;
+  position: relative;
+  bottom: 95px;
 }
 
 main{
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  align-items:flex-start;
   flex-wrap: wrap;
-  margin: 0 auto;
   max-width: 2000px;
+  overflow: auto;
 }
 
 .main-container{
   max-width: 400px;
+  position: relative;
+  top: 2px;
 }
 
-#square-content, #triangle-content, #circle-content{
+/* #square-content, #triangle-content, #circle-content{
   position: relative;
-}
+} */
 
 footer{
   width: 100%;

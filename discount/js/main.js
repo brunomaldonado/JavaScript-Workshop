@@ -35,10 +35,15 @@ const btnCouponsProducts = () => {
 //   priceWithDiscount
 // })
 
+
 //Formula
 const calculateDiscountPrice = (price, discount) => {
   const porcentageOfDiscountedPrice = 100 - discount;
   const priceWithDiscount = (price * porcentageOfDiscountedPrice) / 100;
+
+  if (isNaN(priceWithDiscount)) {
+    return
+  }
 
   return priceWithDiscount;
 }
@@ -48,9 +53,12 @@ const whatYouSave = (price, discount) => {
   const priceWithDiscount = (price * porcentageOfDiscountedPrice)/100;
 
   let  youSave = price - priceWithDiscount;
+  if (isNaN(youSave)) {
+    return
+  }
+
   return youSave; 
 }
-
 
 const buttonCalculateDiscountPrice = () => {
   const inputPrice = document.getElementById("inputPrice")
@@ -60,6 +68,8 @@ const buttonCalculateDiscountPrice = () => {
   const totalToPay = document.getElementById("totalToPay");
 
   const PriceWithDiscount = calculateDiscountPrice(priceValue, discountValue);
+  console.log("Price with discount IS:", PriceWithDiscount);
+
   totalToPay.innerText = `$ ${PriceWithDiscount.toFixed(2)}`;
 
 }
@@ -74,10 +84,6 @@ const validateCouponsInput = () => {
   const inputCoupon = document.getElementById("inputCoupons");
   const couponValue = (inputCoupon.value);
   let discount;
-
-  // if (couponValues ¿¿) {
-    
-  // }
 
   if (!coupons.includes(couponValue)) {
     // alert("invalid! coupons");
@@ -154,13 +160,18 @@ const buttonCalculateDiscountCoupons = () => {
   const youSaveTheAmountOf = document.getElementById("youSaveTheAmountOf");
   youSaveTheAmountOf.innerText = `Te ahorraste: $ ${youSave.toFixed(2)}`;
 
+  console.log("button discount coupons", priceValue, discountValue, youSave)
+
+
+  // if (isNaN(discountCoupons, price)) {
+  //   return 
+  // }
 }
 
 const cleanBox = () => {
   document.getElementById("inputPrice").value = "";
   document.getElementById("inputDiscount").value = "";
   totalToPay.innerHTML = "";
-  console.log("clear box")
 }
 const cleanContent = () => {
   document.getElementById("couponsInputDiscount").value = "";
@@ -172,7 +183,7 @@ const cleanContent = () => {
   document.getElementById("youSaveTheAmountOf").innerHTML = "";
   document.getElementById("inputCoupons").value = "";
 
-  console.log("clean content")
+  // console.log("clean content")
   selectCoupons.disabled = false;
   inputCoupon.disabled = false;
 
@@ -195,12 +206,12 @@ const close = () => {
 }
 
 const closeBanner = () => {
-  console.log("closeBanner")
+  // console.log("closeBanner")
   myModal.style.display = 'none';
 }
 
 const showCoupons = () => {
-  console.log("Show Coupons")
+  // console.log("Show Coupons")
   myModal.style.display = 'block';
 }
 

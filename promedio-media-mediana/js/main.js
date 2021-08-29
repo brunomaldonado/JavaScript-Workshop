@@ -14,28 +14,28 @@ const elemAverage = document.getElementById("average");
 const elemMedian = document.getElementById("median");
 const elemModa = document.getElementById("moda");
 const btnResetAll = document.getElementById("resetAll");
-const arr = [];
+const array = [];
 
 
-const calculateArithmeticMean = (arr) => {
+const calculateArithmeticMean = (newArray) => {
   // let list =0;
 
-  // for (let i = 0; i < arr.length; i++) {
-  //   list = list + arr[i]
+  // for (let i = 0; i < array.length; i++) {
+  //   list = list + array[i]
   // }
   // console.log("The add list is: ", list);
 
-  // const average = list / arr.length;
+  // const average = list / array.length;
   // console.log("The average is: ", average)
   // elemAverage.innerHTML = `El promedio es: ${parseInt(average)}`;
 
-  const arithmeticMean = arr.reduce((accumulateValue, currentValue) => {
-    console.log(`Element_1 ${accumulateValue}, Element_2 ${currentValue}`)
+  const arithmeticMean = newArray.reduce((accumulateValue, currentValue) => {
+    // console.log(`Element_1 ${accumulateValue}, Element_2 ${currentValue}`)
     elemShowElement1_2.innerHTML = `[${accumulateValue}, ${currentValue}]`
     return accumulateValue + currentValue;
   })
 
-  const average = arithmeticMean / arr.length;
+  const average = arithmeticMean / newArray.length;
   // console.log("the Arithmetic Mean is: " + average);
   // elemAverage.innerHTML = `El promedio es: ${parseInt(average)}`;
   return average
@@ -51,28 +51,28 @@ const evenNumber = (number) => {
 
 const calculateMedianInsideArray = () => {
 
-  // halfList = parseInt(arr.length / 2);
+  // halfList = parseInt(array.length / 2);
   // // console.log(`the median is, indexOf[${halfList}]`);
 
   // let median;
 
-  // if (evenNumber(arr.length)) {
-  //   const element1 = arr[halfList - 1];
-  //   const element2 = arr[halfList];
+  // if (evenNumber(array.length)) {
+  //   const element1 = array[halfList - 1];
+  //   const element2 = array[halfList];
 
   //   const meanElement1_2 = calculateArithmeticMean([element1, element2]);
   //   median = meanElement1_2;
-  //   console.log("THE EVEN NUMBER OF THE ARRAY LIST IS ", median);
+  //   console.log("THE EVEN NUMBER OF THE arrayAY LIST IS ", median);
   //   elemMedian.innerHTML = `La mediana es: ${parseInt(median)}`;
   // } else {
-  //   median = arr[halfList]; //half, inside array list
+  //   median = array[halfList]; //half, inside array list
   //   console.log("The array list number half is: ", median);
   //   elemMedian.innerHTML = `La mediana es: ${median}`
   // }
 }
 
 const clear = () => {
-  arr.length = 0;
+  array.length = 0;
   elemShowNumber.innerHTML = `[ ]`;
   elemAverage.innerHTML = ``;
   elemMedian.innerHTML = ``;
@@ -92,45 +92,47 @@ btnResetAll.addEventListener('click', clear);
 
 inputNumber.addEventListener("keyup", function (e) {
   if (e.keyCode === 13) {
-
-    arr.push(parseFloat(e.target.value))
-    arr.sort((a, b) => {
+    
+    array.push(parseFloat(e.target.value))
+    
+    newArray = array.filter(Boolean)
+    newArray.sort((a, b) => {
       return a - b
     });
-    console.log("The list quantity are: ", arr.length)
-    console.log("input list: ", arr);
-    elemShowNumber.innerHTML = `[${arr}] `;
+    
+    console.log("The list quantity are: ", newArray.length)
+    console.log("input list: ", newArray);
+    elemShowNumber.innerHTML = `[${newArray}] `;
 
-
-    const arithmeticMean = arr.reduce((accumulateValue, currentValue) => {
+    const arithmeticMean = newArray.reduce((accumulateValue, currentValue) => {
       console.log(`${accumulateValue}, ${currentValue}`);
       return accumulateValue + currentValue;
     })
-    console.log("the ADD array list is: ", arithmeticMean);
-    elemShowAverage.innerHTML = `[${arithmeticMean}/${arr.length}]`;
+    // console.log("the ADD array list is: ", arithmeticMean);
+    elemShowAverage.innerHTML = `[${arithmeticMean}/${newArray.length}]`;
 
-    // const average = arithmeticMean / arr.length;
+    // const average = arithmeticMean / array.length;
     // console.log("the Arithmetic Mean is: " + average);
     // elemAverage.innerHTML = `El promedio es: ${parseInt(average)}`;
     // return average;
 
 
     //=========================Median============
-    halfList = parseInt(arr.length / 2);
+    halfList = parseInt(newArray.length / 2);
     // console.log(`the median is, indexOf[${halfList}]`);
 
     let median;
 
-    if (evenNumber(arr.length)) {
-      const element1 = arr[halfList - 1];
-      const element2 = arr[halfList];
+    if (evenNumber(newArray.length)) {
+      const element1 = newArray[halfList - 1];
+      const element2 = newArray[halfList];
 
       const meanElement1_2 = calculateArithmeticMean([element1, element2]);
       median = meanElement1_2;
       console.log("THE EVEN NUMBER OF THE ARRAY LIST IS ", median);
       elemMedian.innerHTML = `${parseInt(median)}`;
     } else {
-      median = arr[halfList]; //half, inside array list
+      median = newArray[halfList]; //half, inside array list
       console.log("The array list number half is: ", median);
       elemMedian.innerHTML = `${parseInt(median)}`;
       elemShowElement1_2.innerHTML = `[${median}]`
@@ -141,7 +143,7 @@ inputNumber.addEventListener("keyup", function (e) {
     // ===================Moda====================
     const countRepeatingNumbersList = {};
 
-    arr.map(
+    newArray.map(
       function (arrayElement) {
         if (countRepeatingNumbersList[arrayElement]) {
           countRepeatingNumbersList[arrayElement] += 1; // add the positions of the repeating numbers
@@ -166,22 +168,26 @@ inputNumber.addEventListener("keyup", function (e) {
 
     //The mode is the last position of the array 
     const moda = arrayListLowestToHighest[arrayListLowestToHighest.length - 1];
-    console.log("The moda is: ", moda);
+    // console.log("The moda is: ", moda);
     elemShowModa.innerHTML = `[${moda}]`;
 
     const modaValue = moda.shift()
-    console.log("THE MODA VALUE IS", modaValue);
+    // console.log("THE MODA VALUE IS", modaValue);
     elemModa.innerHTML = `${modaValue}`;
 
     // ===================End Moda=====================
 
 
-    const average = arithmeticMean / arr.length;
-    console.log("the Arithmetic Mean is: " + average);
+    const average = arithmeticMean / newArray.length;
+    // console.log("the Arithmetic Mean is: " + average);
     elemAverage.innerHTML = `${parseInt(average)}`;
     return average;
 
     // document.getElementById("inputNumbers").value = "";
 
-  } else {}
+  } else {
+  // document.getElementById("inputNumbers").value = '';
+
+  }
+
 })

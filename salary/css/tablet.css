@@ -1,0 +1,24 @@
+html{
+    background-color: rgb(54, 71, 67);
+}
+.form-container{
+    max-width: 600px;
+}
+
+.form-card--container__box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-card--title{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.form-card--container{
+    margin-top: 25px;
+    margin: 10px;
+}
