@@ -76,8 +76,8 @@ nav ul li {
 
 main{
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  /* justify-content: center; */
   /* align-items: center; */
   width: 100vw;
   height: 100vh; 
@@ -85,9 +85,11 @@ main{
 }
 
 .main-container{
+  margin: 0 auto;
   max-width: 400px;
   position: relative;
   top: 5px;
+  margin-top: 15px;
 }
 
 input[type="number"] {
@@ -171,6 +173,9 @@ input[type="number"] {
 }
 
 /* end square */
+.form-container--top{
+  width: 360px;
+}
 
 .form-container--top input{
   margin-top: 10px;
