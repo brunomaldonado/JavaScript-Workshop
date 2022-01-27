@@ -1,80 +1,71 @@
-
 header {
     width: 90%;
-    height: 55px;
-    border-radius: 20px;
+    border-radius: 10px 0px 10px 0px;
     position: relative;
     top: 10px;
+    padding: 2px;
 }
 
-.content a {
-    height: 55px;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    text-align: left;
-}
-
-.logo {
-    color: #141414;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 4rem;
-    position: relative;
-    left: 20px;
-}
-
-.toggler {
-    display: none;
-}
-
-nav {
-    display: inline-block !important;
-    position: relative;
-    bottom: 55px;
-    width: auto;
-    float: right;
-    background-color: transparent;
-    border-radius: 20px;
-    background-image: url(../images/0008.jpg);
-    background-size: cover;
-}
-
-nav ul {
+.content {
     display: flex;
     flex-direction: row;
 }
 
-nav ul li {
-    /* display: inline-block; */
+header .logo {
+    padding-left: 10px;
+    color: #000;
+}
+
+nav .nav-menu {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 2vh;
+    opacity: 1;
+    z-index: 1;
+    background-image: none; */
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    height: auto;
+    opacity: 1;
+    z-index: 1;
+    background-image: none;
+}
+
+nav .nav-menu li {
+    padding-top: 0px;
     padding-right: 20px;
     transition: all .5s;
 }
 
-main{
-    position: relative;
-    bottom: 75px;
+nav .navbar-toggle {
+    display: none;
 }
+
+main {
+    padding-top: 52px;
+}
+
 
 .main-title {
     display: flex;
     justify-content: center;
-    width: 65%;
-    margin-top: 12px;
     margin-bottom: 35px;
     font-size: 2.2rem;
 }
 
 .form-container {
-    max-width: 400px;
+    max-width: 560px;
 }
 
 .form-container--title {
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 input[type="number"] {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 }
 
 .form-container--input {
@@ -82,13 +73,18 @@ input[type="number"] {
 }
 
 .form-container--shownumber {
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 1;
 }
 
 .form-container--button {
     width: 70px;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+}
+
+.form-container--output {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .form-container--card {
@@ -119,10 +115,10 @@ input[type="number"] {
     font-weight: 700;
 }
 
-footer{
+footer {
     width: 100%;
     text-align: center;
     padding: 13px;
-    font-size: 1.8rem;
-    font-weight: bold;  
-  }
+    font-size: 1.6rem;
+    font-weight: bold;
+}

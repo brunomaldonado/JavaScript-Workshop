@@ -27,16 +27,17 @@
 
   <header>
     <div class="content">
-      <a class="logo" href="#">BM</a>
-      <!-- <div class="toggler"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></div> -->
-      <div class="toggler"><img src="./assets/bars-solid.svg" alt="nav-bars" aria-hidden="true"></div>
+      <a class="logo" href="../index.html">BM</a>
       <nav>
-        <ul>
+        <ul class="nav-menu">
           <li><a href="../index.html" class="active">Home</a></li>
           <li><a href="../geometric/index.html">Workshop #1</a></li>
           <li><a href="../discount/index.html">Workshop #2</a></li>
           <li><a href="#">Workshop #3</a></li>
         </ul>
+        <div class="navbar-toggle">
+          <div class="menu-btn__burger"></div>
+        </div>
       </nav>
     </div>
   </header>
@@ -48,14 +49,13 @@
       <div class="form-container--top">
         <span class="form-container--title">Ingresa n cantidad de número!</span>
         <input class="form-container--input" type="number" placeholder="numbers" id="inputNumbers" required="required">
+        <img class="form-press--enter" src="./assets/enter-32.png" alt="press enter">
       </div>
 
       <div class="form-container--top">
         <span class="form-container--title">Números ingresados son:</span>
-        <p class="form-container--shownumber" id="showNumbers"></p>
+        <p class="form-container--shownumber" id="showNumbers"><br></p>
       </div>
-      <!-- <input class="form-container--button" id="calculateAverage" type="submit" value="Calculate Average">
-      <input class="form-container--button" id="calculateMedian" type="submit" value="Calcular Mediana"> -->
       <button class="form-container--button" type="button" id="resetAll">Clear</button>
       <div class="form-container--output">
         <div class="form-container--card">
@@ -81,7 +81,6 @@
     <p>Copyright © 2021. <strong style="color:rgb(22, 23, 26)">Bruno Maldonado. </strong>All rights reserved.</p>
   </footer>
 
-  <script src="./js/jquery-3.6.0.min.js"></script>
   <!-- <script src="./js/average.js"></script> -->
   <script src="./js/main.js"></script>
   <!-- <script src="./js/mediana.js"></script> -->

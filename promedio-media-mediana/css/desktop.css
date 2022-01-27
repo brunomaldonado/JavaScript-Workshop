@@ -1,61 +1,13 @@
+/* html {
+    background-size: auto;
+} */
+
 header {
     width: 80%;
-    height: 60px;
-    border-radius: 20px;
-    position: relative;
-    top: 10px;
-}
-
-.content a {
-    height: 60px;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    text-align: left;
-}
-
-.logo {
-    color: #0b0c0c;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 5rem;
-    position: relative;
-    left: 20px;
-}
-
-.toggler {
-    display: none;
-}
-
-nav {
-    display: inline-block !important;
-    position: relative;
-    bottom: 60px;
-    width: auto;
-    float: right;
-    background-color: transparent;
-}
-
-nav ul {
-    display: flex;
-    flex-direction: row;
-}
-
-nav ul li {
-    /* display: inline-block; */
-    margin-right: 25px;
-    transition: all .5s;
+    top: 5px;
+    padding: 3px;
 }
 
 main{
-    position: relative;
-    bottom: 95px;
-}
-
-.form-container {
-    max-width: 460px;
-}
-
-.main-title {
-    font-size: 2.2rem;
+    padding-top: 50px;
 }

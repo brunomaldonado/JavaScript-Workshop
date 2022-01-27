@@ -1,78 +1,25 @@
+
+html {
+  background-size: cover;
+}
 header{
   width: 80%;
-  height: 60px;
-  margin: 0 auto;
-  border-radius: 20px;
   position: relative;
-  top: 10px;
+  top: 5px;
+  padding: 3px;
 }
 
-.content a{
-  height: 60px;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  text-align: left;
+/* main {
+  margin-bottom: 170px;
+} */
+
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(320px, 375px));
 }
 
-.logo {
-  color: #0b0c0c;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 5rem;
-  /* font-size: 90px; */
-  /* display: contents; */
-  position: relative;
-  left: 20px;
-  /* bottom: 8; */
-  /* margin-bottom: 20px; */
-  /* padding-bottom: 18px; */
-  /* top: 26px; */
+.main-container--card {
+  margin: 6px 6px;
 }
 
-.toggler {
-  display: none;
-}
 
-nav {
-  display: inline-block !important;
-  position: relative;
-  bottom: 60px;
-  width: auto;
-  float: right;
-  background-color: transparent;
-}
-
-nav ul {
-  display: flex;
-  flex-direction: row;
-}
-
-nav ul li {
-  /* display: inline-block; */
-  margin-right: 25px;
-  transition: all .5s;
-}
-
-main{
-  margin-top: 66px;
-}
-
-.main-container{
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding-top: 55px;
-  width: 70%;
-  margin: 0 auto;
-}
-
-footer{
-  width: 100%;
-  text-align: center;
-  padding: 20px;
-  font-size: 1.8rem;
-}

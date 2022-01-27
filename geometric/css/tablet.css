@@ -1,104 +1,77 @@
 header{
   width: 90%;
-  height: 55px;
   margin: 0 auto;
-  border-radius: 20px;
-  position: relative;
+  border-radius: 10px 0 10px 0px;
+  position: fixed;
   top: 10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 2px;
 }
 
-.content a{
-  height: 55px;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  text-align: left;
-}
-
-.logo {
-  color: #141414;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 4rem;
-  /* font-size: 80px; */
-  position: relative;
-  left: 20px;
-}
-
-.toggler {
-  display: none;
-}
-
-nav {
-  display: inline-block !important;
-  position: relative;
-  bottom: 55px;
-  width: auto;
-  float: right;
-  background-color: transparent;
-  border-radius: 20px;
-  background-image: url(../images/0008.jpg);
-  background-size: cover;
-}
-
-nav ul {
+.content {
   display: flex;
   flex-direction: row;
 }
 
-nav ul li {
-  padding-right: 20px;
-  transition: all .5s;
+.logo {
+  color: #141414;
+  padding-left: 10px;
 }
+
+nav .nav-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  height: auto;
+  opacity: 1;
+  z-index: 1;
+  background-image: none;
+}
+
+nav .nav-menu li {
+  padding-top: 0px;
+  transition: all .5s;
+  padding-right: 20px;
+}
+
+nav .navbar-toggle {
+  display: none;
+}
+
 /* end nav */
 
-.header--title-container {
-  display: flex;
-  justify-content: center;
+main {
+  padding-top: 70px;
 }
 
-.header--title-container h1 {
-  font-family: "designer";
-  font-size: 3rem;
-  font-weight: 800;
-  position: relative;
-  top: 3px;
+.main--title-container {
+  font-size: 2.4rem;
+  /* margin: 11px 0; */
 }
 
 .menuButtons {
-  font-size: 1.4rem;
-  width: 90px;
+  font-size: 1.8rem;
+  width: 100px;
   margin: 8px;
   padding: 8px;
-  position: relative;
-  bottom: 85px;
-}
-
-main{
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  /* align-items: center; */
-  width: 100vw;
-  height: 100vh; 
-  overflow: auto;
 }
 
 .main-container{
-  margin: 0 auto;
   max-width: 400px;
-  position: relative;
-  top: 5px;
-  margin-top: 15px;
+  margin-top: 13px
+}
+
+.main-container--card {
+  height: 430px;
 }
 
 input[type="number"] {
   border: 2px solid rgb(231, 223, 207);
   border-radius: 10px;
-  outline: none;
   background-color: inherit;
-  color: rgb(14, 14, 14);
-  font-size: 2rem;
+  font-size: 1.8rem;
   padding: 3px;
   transition: 0.3s;
   text-align: center;
@@ -112,11 +85,11 @@ input[type="number"] {
 }
 
 .main-container--title {
-  font-size: 1.9rem;
+  font-size: 1.7rem;
 }
 
 .form-container--title {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 .form-container--result{
@@ -124,127 +97,62 @@ input[type="number"] {
   font-size: 1.8rem;
 }
 
-.form-container--right {
-  font-size: 1.6rem;
-}
-
-.form-container--button{
-  padding: 6px;
-  margin: 4px;
-  border-radius: 10px;
+.form-container--button {
   width: 130px;
-  font-size: 1.4rem;
-}
-
-.form-container--buttonTr{
-  padding: 6px;
-  margin: 4px;
-  border-radius: 10px;
-  width: 130px;
-  font-size: 1.4rem;
-}
-
-.form-container--square {
-  font-size: 1.5rem;
-}
-
-.form-container--square .a {
-  position: inherit;
-  left: calc(55% - 48px);
-  bottom: calc(35%);
-}
-
-.form-container--square .b {
-  position: inherit;
-  left: calc(100% - 20px);
-  top: calc(20%);
-}
-
-.form-container--square .c {
-  position: inherit;
-  top: calc(73%);
-  left: calc(55% - 48px);
-}
-
-.form-container--square .d {
-  position: inherit;
-  bottom: calc(20%);
-  right: calc(100% - 20px);
+  padding: 7px;
 }
 
 /* end square */
-.form-container--top{
-  width: 360px;
+.form-container--top {
+  width: 330px;
 }
 
 .form-container--top input{
   margin-top: 10px;
   width: 100px;
-  padding: 4px;
+  /* padding: 4px; */
   margin: 4px;
 }
 
-/* .form-container--sideRight button {
-  position: relative;
-  top: 18px;
-  left: calc(75% - 55px);
-  width: 122px;
-  font-size: 1.4rem;
-  padding: 5px;
-  margin: 3px;
-} */
-
 .form-container--triangle {
-  margin-top: 25px;
-  text-align: center;
-  font-size: 1.5rem;
+  position: relative;
+  top: 10px;
+  left: calc(50% - 50px);
 }
 
 .form-container--triangleArea {
   position: relative;
   left: calc(40% - 50px);
-  margin-top: 5px;
+  /* margin-top: 5px; */
   text-align: center;
   font-size: 1.5rem;
 }
 
 /* end triangle */
 
-.banner {
-  width: 35px;
-  height: 35px;
-}
-
 .modal-content {
   margin: auto;
   padding: 5px;
   border: 2px solid rgba(231, 174, 174, 0.671);
-  border-radius: 10px;
-  margin-top: 8px;
+  /* border-radius: 10px; */
+  /* margin-top: 8px; */
   width: 98%;
-  height: 96%;
+  height: 98%;
   background: rgba(255, 255, 255, 0.959);
 
 }
 
 .close {
   position: absolute;
-  top: 14px;
-  right: 10px;
-  display: inline-block;
+  top: 5px;
   width: 20px;
   height: 20px;
-  background-color: rgb(245, 8, 8);
-  color: rgb(235, 238, 232);
-  border-radius: 50%;
-  color: transparent;
-  border: transparent;
-  cursor: pointer;
+  /* font-size: 1.5rem; */
 } 
 
 footer{
   width: 100%;
   text-align: center;
-  padding: 15px;
-  font-size: 1.7rem;
+  padding: 13px;
+  font-size: 1.6rem;
 }

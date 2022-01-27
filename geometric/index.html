@@ -19,38 +19,34 @@
 </head>
 
 <body>
-
   <header>
     <div class="content">
-      <a class="logo" href="#">BM</a>
-      <!-- <div class="toggler"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></div> -->
-      <div class="toggler"><img src="./assets/bars-solid.svg" alt="nav-bars" aria-hidden="true"></div>
+      <a class="logo" href="../index.html">BM</a>
       <nav>
-        <ul>
+        <ul class="nav-menu">
           <li><a class="active" href="../index.html">Home</a></li>
           <li><a href="#">Workshop #1</a></li>
           <li><a href="../discount/index.html">Workshop #2</a></li>
           <li><a href="../promedio-media-mediana/index.html">Workshop #3</a></li>
         </ul>
+        <div class="navbar-toggle">
+          <div class="menu-btn__burger"></div>
+        </div>
       </nav>
     </div>
   </header>
 
-  <div class="header--title-container">
-    <h1>Calculating geometric figures</h1>
-  </div>
-
-  <div class="opcionMenu">
-    <button id="btnMenuSquare" class="menuButtons" onclick="squareButton('square-content')">SQUARE</button>
-    <button id="btnMenuTriangle" class="menuButtons" onclick="triangleButton('triangle-content')">TRIANGLE</button>
-    <button id="btnMenuCircle" class="menuButtons" onclick="cricleButton('circle-content')">CIRCLE</button>
-  </div>
-
   <main>
-    <!-- <div class="main-container--contents"> -->
-    <!-- Square -->
-    <div id="square-content">
-      <div class="main-container">
+    <h1 class="main--title-container">Calculating geometric figures</h1>
+    <div class="menu-options">
+      <button id="btnMenuSquare" class="selection_buttons" onclick="squareButton('square-content')">SQUARE</button>
+      <button id="btnMenuTriangle" class="selection_buttons"
+        onclick="triangleButton('triangle-content')">TRIANGLE</button>
+      <button id="btnMenuCircle" class="selection_buttons" onclick="cricleButton('circle-content')">CIRCLE</button>
+    </div>
+
+    <div class="main_container">
+      <div id="square-content" class="main-container--card">
         <p class="main-container--title">Calcular el area y el perimetro del cuadrado!</p>
         <form onsubmit="return false" action="#" id="form-container" class="form-container">
           <p class="form-container--title" id="question">Cuanto mide cada lado del cuadrado?</p>
@@ -61,66 +57,82 @@
               <p class="form-container--result" id="squarePerimeter"></p>
             </div>
             <div class="form-container--right">
-              <input class="form-container--button"  id="area" type="submit" value="Calculate Area" onclick="calculateAreaSquare()"></input>
-              <input class="form-container--button"  id="perimeter" type="submit" value="Perimeter" onclick="calculatePerimeterSquare()"></input>
-              <button class="form-container--button"  id="reset" type="button" onclick="resetAll()">Reset</button>
+              <input class="form-container--button" id="area" type="submit" value="Calcular Area"
+                onclick="calculateAreaSquare()"></input>
+              <input class="form-container--button" id="perimeter" type="submit" value="Perimetro"
+                onclick="calculatePerimeterSquare()"></input>
+              <button class="form-container--button" id="reset" type="button" onclick="resetAll()">Limpiar</button>
             </div>
           </div>
-          <div id="square" class="form-container--square">
+        </form>
+        <div id="square" class="form_container">
+          <div class="form-container--square">
             <div id="SqSide1" class="a">a</div>
             <div id="SqSide2" class="b">b</div>
             <div id="SqSide3" class="c">c</div>
             <div id="SqSide4" class="d">d</div>
           </div>
-        </form>
-        <section class="banner" onclick="SquareInfo()"><img src="./assets/battle-net-brands.svg" alt=""></section>
+        </div>
+        <button class="banner" onclick="SquareInfo()"><img src="./assets/info-4-16.png" alt=""></button>
         <div id="myModal" class="modal">
           <div class="modal-content">
-            <span id="close" class="close" onclick="close()"></span>
+            <span id="close" class="close" onclick="close()">X</span>
             <p>Some text in the modal</p>
           </div>
         </div>
       </div>
-    </div>
-    <!-- Triangle -->
-    <div id="triangle-content">
-      <div class="main-container">
+
+      <div id="triangle-content" class="main-container--card">
         <p class="main-container--title">Calcular el area, el perimetro y la altura del triangulo!</p>
         <form onsubmit="return false" action="#" id="form-container" class="form-container">
-          <p class="form-container--title" id="questionH">Cuanto mide la altura del triangulo?</p>
-          <div id="triangleCard" class="form-container--card">
-            <div id="inputTriangle" class="form-container--top">
-              <input type="number" class="sides" id="side1" placeholder="side1" required>
-              <input type="number" class="sides" id="side2" placeholder="side2" required>
-              <input type="number" class="sides" id="side3" placeholder="side3" required>
-            </div>
-            <!-- calculate area here -->
-            <div id="box-triangleArea" class="card-box">
-              <p class="form-container--title" id="questionA">Cuanto mide el area del triangulo?</p>
-              <div class="form-container--top">
-                <input type="number" class="sides" id="base" placeholder="base" required>
-                <input type="number" class="sides" id="height" placeholder="height" required>
-              </div>
-              <div class="form-container--sideLeft">
-                <p class="form-container--result" id="triangleArea"></p>
+          <div class="triangle-box">
+            <div id="triangleCard" class="form-container--card">
+              <p class="form-container--title" id="questionH">Cuanto mide la altura del triangulo?</p>
+              <div id="inputTriangle" class="form-container--top">
+                <input type="number" class="sides" id="side1" placeholder="side a" required>
+                <input type="number" class="sides" id="side2" placeholder="side b" required>
+                <input type="number" class="sides" id="side3" placeholder="side c" required>
               </div>
               <div class="form-container--sideRight">
-                <input class="form-container--buttonTr" id="area" type="submit" value="Area" onclick="calculateAreaTriangle()"></input>
-                <button class="form-container--buttonTr" type="button" onclick="resetAll()">Reset</button>
-                <!-- <div id="btn-prev">&#60</div> -->
-                <button class="form-container--button__return" type="button" onclick="toReturn('triangleCard')">&#60</button>
-                <!-- <button class="form-container--button__return" type="button" onclick="toReturn('triangleCard')">Return</button> -->
+                <p class="form-container--result" id="trianglePerimeter"></p>
+                <p class="form-container--result" id="triangleHeight"></p>
+              </div>
+              <div id="triangleButtons" class="form-container--right">
+                <input class="form-container--button" id="perimeter" type="submit" value="Perimeter"
+                  onclick="calculatePerimeterTriangle()"></input>
+                <input class="form-container--button" id="height" type="submit" value="Height"
+                  onclick="calculateHeightTriangle()"></input>
+                <button class="form-container--button" id="area" type="button"
+                  onclick="buttonTriangleArea('box-triangleArea')"><img class="button_letter"
+                    src="./assets/amazon-16.png" alt=""><span>rea</span></button>
+                <button class="form-container--button" type="button" onclick="resetAll()">Reset</button>
               </div>
             </div>
-            <div class="form-container--sideLeft">
-              <p class="form-container--result" id="trianglePerimeter"></p>
-              <p class="form-container--result" id="triangleHeight"></p>
-            </div>
-            <div id="triangleButtons" class="form-container--sideRight">
-              <input class="form-container--buttonTr" id="perimeter" type="submit" value="Perimeter" onclick="calculatePerimeterTriangle()"></input>
-              <input class="form-container--buttonTr"t id="height" type="submit" value="Height" onclick="calculateHeightTriangle()"></input>
-              <button class="form-container--buttonTr" id="area" type="button" onclick="buttonTriangleArea('box-triangleArea')">Area</button>
-              <button class="form-container--buttonTr" type="button" onclick="resetAll()">Reset</button>
+          </div>
+          <div id="box-triangleArea" class="triangle-boxTwo">
+            <p class="form-container--title" id="questionA">Cuanto mide el area del triangulo?</p>
+            <div class="form-container--card">
+              <div class="form-container--top">
+                <input type="number" class="sides" id="base" placeholder="base" required>
+                <input type="number" class="sides" id="height2" placeholder="height" required>
+              </div>
+              <div class="form-container--sideLeftA">
+                <p class="form-container--result" id="triangleArea"></p>
+              </div>
+              <div class="form-container--right">
+                <button class="form-container--button" id="area" type="submit" value="Area"
+                  onclick="calculateAreaTriangle()">Area</button>
+                <button class="form-container--button" type="submit" onclick="resetAll()">Reset</button>
+                <button class="form-container--button__return" type="button" onclick="toReturn('triangleCard')">
+                  <div class="arrow">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </button>
+                <!-- <button class="form-container--button__return" type="button"
+                  onclick="toReturn('triangleCard')"><img class="undo move-left" src="./assets/arrow-left-6-32.png" alt=""></button> -->
+              </div>
             </div>
           </div>
           <div id="triangle" class="form-container--triangle">
@@ -134,28 +146,26 @@
             <div id="TrBase" class="c">base</div>
           </div>
         </form>
-        <section class="banner" onclick="TriangleInfo()"><img src="./assets/battle-net-brands.svg" alt="">
-        </section>
+        <button class="banner" onclick="TriangleInfo()"><img src="./assets/info-4-16.png" alt="">
+        </button>
         <div id="myModal2" class="modal">
           <div class="modal-content">
-            <span id="close" class="close" onclick="close1()"></span>
+            <span id="close" class="close" onclick="close1()">X</span>
             <p>Some text in the modal</p>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Circle -->
-    <div id="circle-content">
-      <div class="main-container">
-        <p class="main-container--title">Calcular el area, el perimetro y el <strong><i>r</i></strong> del circulo!</p>
+      <div id="circle-content" class="main-container--card">
+        <p class=" main-container--title">Calcular el area, el perimetro y el <strong><i>r</i></strong> del circulo!
+        </p>
         <form onsubmit="return false" id="form-container" class="form-container">
           <div id="box-Circle" class="circle-boxCircumferenceOne">
             <p class="form-container--title" id="questionR">Cuanto mide el radio del circulo?</p>
             <div class="form-container--card">
               <div class="form-container--left">
                 <div id="inputRadio">
-                  <input type="number" class="radio" id="radio" placeholder="radio" required>
+                  <input type="number" class="radio" id="radio" placeholder="radius" required>
                 </div>
                 <div class="form-container--sideLeft">
                   <p class="form-container--result" id="circleArea"></p>
@@ -164,10 +174,14 @@
                 </div>
               </div>
               <div class="form-container--right">
-                <input class="form-container--button" id="area" type="submit" value="Area" onclick="calculateAreaCircle()"></input>
-                <input class="form-container--button" id="perimeter" type="submit" value="Perimeter" onclick="calculatePerimeterCircle()"></input>
-                <input class="form-container--button" id="diameter" type="submit" value="Diameter" onclick="calculateDiameterCircle()"></input>
-                <button class="form-container--button" id="circumference" type="button"onclick="buttonCircumference('box-Circumference')">Circumference</button>
+                <input class="form-container--button" id="area" type="submit" value="Area"
+                  onclick="calculateAreaCircle()"></input>
+                <input class="form-container--button" id="perimeter" type="submit" value="Perimeter"
+                  onclick="calculatePerimeterCircle()"></input>
+                <input class="form-container--button" id="diameter" type="submit" value="Diameter"
+                  onclick="calculateDiameterCircle()"></input>
+                <button class="form-container--button" id="circumference" type="button"
+                  onclick="buttonCircumference('box-Circumference')">Circumference</button>
                 <button class="form-container--button" id="reset" type="button" onclick="resetAll()">Reset</button>
               </div>
             </div>
@@ -183,12 +197,20 @@
                 <p class="form-container--result" id="circleRadio"></p>
               </div>
               <div class="form-container--right">
-                <input class="form-container--button" id="SecondArea" type="submit" value="Calculate Area" onclick="calculateSecondAreaCircle()"></input>
-                <input class="form-container--button" id="SecondPerimeter" type="submit" value="Perimeter" onclick="calculateSecondPerimeterCircle()"></input>
-                <input class="form-container--button" id="circleRadio" type="submit" value="Radio" onclick="calculateRadioCircle()"></input>
+                <input class="form-container--button" id="SecondArea" type="submit" value="Calculate Area"
+                  onclick="calculateSecondAreaCircle()"></input>
+                <input class="form-container--button" id="SecondPerimeter" type="submit" value="Perimeter"
+                  onclick="calculateSecondPerimeterCircle()"></input>
+                <input class="form-container--button" id="circleRadio" type="submit" value="Radio"
+                  onclick="calculateRadioCircle()"></input>
                 <button class="form-container--button" type="button" onclick="resetAll()">Reset</button>
-                <button class="form-container--button__return" type="button" onclick="toReturn('triangleCard')">&#60</button>
-                <!-- <button type="button"  class="form-container--button__return" onclick="toReturn('box-Circle')">Return</button> -->
+                <button class="form-container--button__return" type="button" onclick="toReturn('triangleCard')">
+                  <div class="arrow">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>  
+                </button>
               </div>
             </div>
           </div>
@@ -198,24 +220,22 @@
             <div id="circleA" class="A">A</div>
           </div>
         </form>
-        <section class="banner" onclick="CircleInfo()"><img src="./assets/battle-net-brands.svg" alt="">
-        </section>
+        <button class="banner" onclick="CircleInfo()"><img src="./assets/info-4-16.png" alt="">
+        </button>
         <div id="myModal3" class="modal">
           <div class="modal-content">
-            <span id="close" class="close" onclick="close2()"></span>
+            <span id="close" class="close" onclick="close2()">X</span>
             <p>Some text in the modal</p>
           </div>
         </div>
       </div>
     </div>
-    <!-- </div> -->
   </main>
 
   <footer>
     <p>Copyright © 2021. <strong style="color:rgb(22, 23, 26)">Bruno Maldonado. </strong>All rights reserved.</p>
   </footer>
 
-  <script src="./js/jquery-3.6.0.min.js"></script>
   <script src="./js/main.js"></script>
 </body>
 

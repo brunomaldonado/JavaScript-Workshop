@@ -1,8 +1,20 @@
-$(function() {
-	$('.toggler').on('click', function() {
-		$('nav').slideToggle(500);
-  });
-});
+
+const navbarToggle = document.querySelector('.navbar-toggle');
+const navMenu = document.querySelector('.nav-menu');
+const bars = document.querySelector('.navbar-toggle span');
+let menuOpen = false;
+
+navbarToggle.addEventListener('click', () => {
+  if(!menuOpen) {
+    navbarToggle.classList.add('open');
+    menuOpen = true;
+  } else {
+    navbarToggle.classList.remove('open');
+    menuOpen = false;
+  }
+  navMenu.classList.toggle('active');
+  console.log('clic nav menu')
+})
 
 const modal = document.getElementById("myModal")
 const modal2 = document.getElementById("myModal2");
@@ -61,7 +73,7 @@ window.onclick = (event) => {
 const squareButton = (id) => {
   if (document.getElementById) { //se obtiene el id
     var el = document.getElementById(id); // se obtiene la variable "el" igual a nuestro div
-    el.style.display = (el.style.display == 'none') ? 'block' : 'none' // damos un atributo display:none que oculta el div
+    el.style.display = (el.style.display == 'none') ? 'block' : 'block' // damos un atributo display:none que oculta el div
   }
   modal.style.display = 'none';
   document.getElementById("side").value = "";
@@ -74,6 +86,9 @@ const squareButton = (id) => {
   SqSide4.innerHTML = `d`;
 
   questionH.style.display = 'block';
+
+  // document.getElementById('triangle-content').style.display = 'none';
+  // document.getElementById('circle-content').style.display = 'none';
 }
 
 // =================================================Triangle============================================
@@ -94,15 +109,19 @@ const triangleButton = (id) => {
   TrianglePerimeter.innerHTML = "";
   TriangleHeight.innerHTML = "";
 
-  triangleone.style.display = 'none';
-  boxTriangleArea.style.display = 'none';
+  triangleone.style.display = 'block';
+  boxTriangleArea.style.display = 'block';
+  document.getElementById('triangleCard').style.display = 'none';
   inputTriangle.style.display = 'block';
   triangleButtons.style.display = 'block';
-  triangle.style.display = 'block';
+  triangle.style.display = 'none';
 
   TrSide1.innerHTML = `a`;
   TrSide2.innerHTML = `b`;
   TrSide3.innerHTML = `c`;
+
+  // document.getElementById('square-content').style.display = 'none';
+  // document.getElementById('circle-content').style.display = 'none';
 
 }
 const buttonTriangleArea = (id) => {
@@ -143,6 +162,9 @@ const cricleButton = (id) => {
   SecondCircleArea.innerHTML = "";
   SecondCirclePerimeter.innerHTML = "";
   circleRadio.innerHTML = "";
+
+  // document.getElementById('square-content').style.display = 'none';
+  // document.getElementById('triangle-content').style.display = 'none';
 }
 
 const buttonCircumference = (id) => {
@@ -164,6 +186,7 @@ const buttonCircumference = (id) => {
   SecondCircleArea.innerHTML = "";
   SecondCirclePerimeter.innerHtml = "";
   circleRadio.innerHtml = "";
+
 }
 
 //=============================================ToReturn===========================================
@@ -196,16 +219,16 @@ const toReturn = (id) => {
   questionR.style.display = 'block';
 }
 
-//Here call the functions events listener onclick
-window.onload = function () {
-  /* hace que se cargue la function lo que predetermina que div estara oculto por un largo tiempo hasta la llamar la funcion nuevamente */
-  squareButton('square-content'); /* "contenido a mostrar" es el nombre que le dimos al div*/
-  triangleButton('triangle-content');
-  cricleButton('circle-content');
-  buttonTriangleArea('box-triangleArea');
-  toReturn('triangleCard')
-  buttonCircumference('box-Circumference')
-}
+// Here call the functions events listener onclick
+// window.onload = function () {
+//   /* hace que se cargue la function lo que predetermina que div estara oculto por un largo tiempo hasta la llamar la funcion nuevamente */
+//   squareButton('square-content'); /* "contenido a mostrar" es el nombre que le dimos al div*/
+//   triangleButton('triangle-content');
+//   cricleButton('circle-content');
+//   buttonTriangleArea('box-triangleArea');
+//   toReturn('triangleCard')
+//   buttonCircumference('box-Circumference')
+// }
 
 
 //==========================================Calculate Figure Square==========================================
@@ -246,17 +269,17 @@ const calculateAreaSquare = () => {
 //==========================================Calculate Figure Isosceles Triangle==========================================
 //Isosceles triangle
 const perimeterOfTheTriangle = (side1, side2, side3) => parseFloat(side1) + parseFloat(side2) + parseFloat(side3);
-const triangleArea = (base, height) => (parseFloat(base) * parseFloat(height)) / 2;
+const triangleArea1 = (base, height) => (parseFloat(base) * parseFloat(height)) / 2;
 const isoscelesHeight = (side1, side2, side3) => Math.sqrt(side1 * side2 - (side3 ** 2) / 4);
 
 //Calculate Area 
 const calculateAreaTriangle = () => {
   const base = document.getElementById("base").value;
-  const height = document.getElementById("height").value;
+  const height = document.getElementById("height2").value;
   const element = document.getElementById("triangleArea");
 
-  const areaTriangle = triangleArea(base, height);
-  element.innerHTML = `Area: ${areaTriangle}`;
+  const areaTriangle = triangleArea1(base, height);
+  element.innerHTML = `Area: ${areaTriangle.toFixed(2)}`;
 
 }
 
@@ -272,7 +295,7 @@ const calculatePerimeterTriangle = () => {
   const TrSide3 = document.getElementById("TrSide3");
 
   const perimeter = perimeterOfTheTriangle(input1, input2, input3);
-  element.innerHTML = `Perimeter: ${perimeter}`;
+  element.innerHTML = `Perimeter: ${perimeter.toFixed(2)}`;
 
   TrSide1.innerHTML = input1;
   TrSide2.innerHTML = input2;
@@ -381,9 +404,9 @@ const resetAll = () => {
   document.getElementById("side3").value = "";
   document.getElementById("base").value = "";
   document.getElementById("height").value = "";
+  document.getElementById("height2").value = "";
   document.getElementById("radio").value = "";
   document.getElementById("totalDiameter").value = "";
-
 
   SquareArea.innerHTML = "";
   SquarePerimeter.innerHTML = "";
@@ -425,5 +448,75 @@ const close2 =() => {
   console.log("close modal 3")
 }
 
+
+// const resize = () => {
+//   if (innerWidth > 700) {
+//     document.body.style.background = '#3cb371'; //verde
+
+//     document.getElementById('square-content').style.display = 'block';
+//     document.getElementById('triangle-content').style.display = 'block';
+//     document.getElementById('circle-content').style.display = 'block';
+
+//   } else {
+//     document.body.style.background = '#6a5acd'; //morado
+
+//     document.getElementById('square-content').style.display = 'none';
+//     document.getElementById('triangle-content').style.display = 'block';
+//     document.getElementById('circle-content').style.display = 'none';
+//   }
+// }
+
+const mediumBp = matchMedia('(min-width: 1024px)');
+const showCards = () => {
+  // window.location.reload();
+  // window.location.hash = 'reload';
+
+  document.getElementById('square-content').style.display = 'block';
+  document.getElementById('triangle-content').style.display = 'none';
+  document.getElementById('circle-content').style.display = 'none';
+  // document.body.style.background = '#3cb371'; //verde
+}
+const noneCards = () => {
+
+  const btnSquare = document.getElementById('btnMenuSquare');
+  const btnTriangle = document.getElementById('btnMenuTriangle');
+  const btnCircle = document.getElementById('btnMenuCircle');
+
+  btnSquare.addEventListener ('click', () => {
+    document.getElementById('triangle-content').style.display = 'none';
+    document.getElementById('circle-content').style.display = 'none';
+  })
+
+  btnTriangle.addEventListener('click', () => {
+    document.getElementById('square-content').style.display = 'none';
+    document.getElementById('circle-content').style.display = 'none';
+  })
+
+  btnCircle.addEventListener('click', () => {
+    document.getElementById('square-content').style.display = 'none';
+    document.getElementById('triangle-content').style.display = 'none';
+  })
+
+  document.getElementById('square-content').style.display = 'block';
+  document.getElementById('triangle-content').style.display = 'none';
+  document.getElementById('circle-content').style.display = 'none';
+
+  // document.body.style.background = '#6a5acd'; //morado
+
+ 
+}
+
+const changeSize = mql => {
+  mql.matches ?
+    window.onload = showCards() :
+    noneCards()
+}
+
+mediumBp.addListener(changeSize);
+changeSize(mediumBp);
+
+
 //Events listener
 btnClose.addEventListener('click', close);
+// addEventListener('resize', resize)
+// addEventListener('DOMContentLoaded', resize)

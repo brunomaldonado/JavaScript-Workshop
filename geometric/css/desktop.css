@@ -1,97 +1,27 @@
 header{
   width: 80%;
-  height: 60px;
-  margin: 0 auto;
-  border-radius: 20px;
-  /* position: relative; */
-  top: 10px;
+  top: 5px;
 }
 
-.content a{
-  height: 60px;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  text-align: left;
-}
-
-.logo {
-  color: #0b0c0c;
-  text-transform: uppercase;
-  text-decoration: none;
-font-size: 5rem;
-  /* font-size: 90px; */
-  position: relative;
-  left: 20px;
-  /* padding-bottom: 18px; */
-}
-
-.toggler {
-  display: none;
-}
-
-nav {
-  display: inline-block !important;
-  position: relative;
-  bottom: 60px;
-  width: auto;
-  float: right;
-  background-color: transparent;
-}
-
-nav ul {
-  display: flex;
-  flex-direction: row;
-}
-
-nav ul li {
-  /* display: inline-block; */
-  margin-right: 25px;
-  transition: all .5s;
-}
-/* end nav menu -------------------------*/
-
-
-.header--title-container h1 {
-  font-family: "designer";
+.header--title-container {
   font-size: 3.6rem;
-  font-weight: 800;
-  margin-bottom: 25px;
-  /* margin: 5px 0px 35px 0px; */
 }
 
-.menuButtons {
-  font-size: 1.3rem;
-  width: 90px;
-  margin: 8px;
-  padding: 8px;
-  position: relative;
-  bottom: 95px;
-}
-
-main{
+.main_container {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-content: center;
+  gap: 8px; */
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   flex-wrap: wrap;
-  max-width: 2000px;
-  overflow: auto;
+  margin-top: 13px
+  /* border: 1px solid red; */
 }
 
-.main-container{
-  max-width: 400px;
-  margin: 10px;
-  /* position: relative; */
-  /* top: 42px; */
+.main-container--card {
+  width: 420px;
 }
 
-/* #square-content, #triangle-content, #circle-content{
-  position: relative;
+/* .menu-options {
+  display: none;
 } */
-
-footer{
-  width: 100%;
-  text-align: center;
-  padding: 20px;
-  font-size: 2rem;
-}

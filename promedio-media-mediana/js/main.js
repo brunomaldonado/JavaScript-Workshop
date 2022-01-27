@@ -1,12 +1,26 @@
-$(function() {
-	$('.toggler').on('click', function() {
-		$('nav').slideToggle(500);
+const navbarToggle = document.querySelector('.navbar-toggle');
+const navMenu = document.querySelector('.nav-menu');
+let menuOpen = false;
+
+navbarToggle.addEventListener('click', () => {
+  if(!menuOpen) {
+    navbarToggle.classList.add('open');
+    menuOpen = true;
+  } else {
+    navbarToggle.classList.remove('open');
+    menuOpen = false;
+  }
+  navMenu.classList.toggle('active')
+  bars.forEach(child => {
+    child.classList.toggle('animations');
   });
 });
+
 // const btnCalculateAverage = document.getElementById("calculateAverage");
 // const btnCalculateMedian = document.getElementById("calculateMedian");
 const inputNumber = document.getElementById("inputNumbers");
 const elemShowNumber = document.getElementById("showNumbers");
+const elemShowNumber1 = document.getElementById("showNumbers1");
 const elemShowAverage = document.getElementById("showElementAverage")
 const elemShowElement1_2 = document.getElementById("showElement1_2")
 const elemShowModa = document.getElementById("showElementModa")
@@ -78,11 +92,9 @@ const clear = () => {
   elemMedian.innerHTML = ``;
   elemModa.innerHTML = ``;
   elemShowAverage.innerHTML = ``;
-  elemShowElement1_2.innerHTML = ``;
   elemShowModa.innerHTML = ``;
-
+  showElement1_2.innerHTML = ``;
   document.getElementById("inputNumbers").value = "";
-
 }
 
 //Events Listener
@@ -91,18 +103,33 @@ const clear = () => {
 btnResetAll.addEventListener('click', clear);
 
 inputNumber.addEventListener("keyup", function (e) {
+
   if (e.keyCode === 13) {
-    
+
     array.push(parseFloat(e.target.value))
-    
-    newArray = array.filter(Boolean)
+
+    newArray = array.filter(Boolean);
+
+
+
     newArray.sort((a, b) => {
       return a - b
     });
-    
+    inputNumber.value = '';
+
+
+
     console.log("The list quantity are: ", newArray.length)
     console.log("input list: ", newArray);
-    elemShowNumber.innerHTML = `[${newArray}] `;
+    elemShowNumber.innerHTML = `[${newArray}]`;
+
+
+    // if (newArray.length == 5) {
+    //   elemShowNumber.innerHTML = `<br>${newArray.length}]`;
+    //   console.log("===========pre wrap============")
+    // } else {
+
+    // }
 
     const arithmeticMean = newArray.reduce((accumulateValue, currentValue) => {
       console.log(`${accumulateValue}, ${currentValue}`);
@@ -183,11 +210,8 @@ inputNumber.addEventListener("keyup", function (e) {
     elemAverage.innerHTML = `${parseInt(average)}`;
     return average;
 
-    // document.getElementById("inputNumbers").value = "";
-
   } else {
-  // document.getElementById("inputNumbers").value = '';
-
+    'code';
   }
 
 })

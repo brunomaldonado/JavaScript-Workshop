@@ -21,25 +21,23 @@
   <header>
     <div class="content">
       <a class="logo" href="#">BM</a>
-      <div class="toggler"><img src="./assets/bars-solid.svg" alt="nav-bars" aria-hidden="true"></div>
       <nav>
-        <ul>
+        <ul class="nav-menu">
           <li><a class="acrive" href="../index.html">Home</a></li>
           <li><a href="../geometric/index.html">Workshop #1</a></li>
           <li><a href="#">Workshop #2</a></li>
           <li><a href="../promedio-media-mediana/index.html">Workshop #3</a></li>
         </ul>
+        <div class="navbar-toggle">
+          <div class="menu-btn__burger"></div>
+        </div>
       </nav>
     </div>
   </header>
 
-  <div class="header--title-container">
-    <h1>Calcular el descuento de un producto a adquirir</h1>
-    <p>Second Practical course workshop</p>
-  </div>
-
   <main>
-    <div class="main-container--contents">
+    <div class="main-container">
+      <h1 class="header--title-container">Calcular el descuento de un producto a adquirir</h1>
       <div id="product-content" class="main-products">
         <h2>Calcula el precio a pagar de tus productos con descuento</h2>
         <div class="main-products__container">
@@ -54,8 +52,8 @@
               <span>Descuento:</span>
             </div>
             <div class="form-container--couponsButton">
-              <input class="form-container--button" type="submit" value="Calcular" onclick="buttonCalculateDiscountPrice()"></input>
-              <button class="form-container--button" id="cleanBox" type="button">clear</button>
+              <!-- <input class="form-container--button" type="submit" value="Calcular" onclick="buttonCalculateDiscountPrice()"></input> -->
+              <button class="form-container--button_clear" id="cleanBox" type="button">Limpiar</button>
             </div>
             <div id="totalPrice" class="totalPrice">
               <span>Con descuento son:</span>
@@ -66,76 +64,77 @@
         </div>
       </div>
 
+      <div class="pro_content"></div>
+
       <div id="product-content1" class="main-products">
         <h2>Calcula el precio a pagar del producto con cupones especiales</h2>
-        <div class="main-products__container">
-          <form onsubmit="return false" action="#" id="form-container" class="form-container">
-            <div class="inputBox">
-              <input id="couponsInputPrice" type="number" required="required">
-              <span>Precio:</span>
-            </div>
-            <div class="inputBox">
-              <input id="couponsInputDiscount" type="number" required="required">
-              <span>Descuento:</span>
-            </div>
-            <div class="form-container__coupons">
-              <label for="selectCoupons">Cupon:</label>
-              <select name="selectCoupons" name="selectCoupons" id="selectCoupons">
-                <option value="0">------</option>
-                <option value="10">-10%</option>
-                <option value="25">-25%</option>
-                <option value="50">-50%</option>
-              </select>
-              <div id="input" class="form-container__coupons--input">
-                <input id="inputCoupons" onkeyup="mayus(this)" type="text" placeholder="Cupones" required="required" disabled>
-                <button class="form-container--btnShowCoupons" id="showCoupons">Here</button>
-                
+        <div class="product-card">
+          <div class="main-products__container">
+            <form onsubmit="return false" action="#" id="form-container" class="form-container">
+              <div class="inputBox">
+                <input id="couponsInputPrice" type="number" required="required">
+                <span>Precio:</span>
               </div>
-            </div>
-            <div class="form-container--couponsButton">
-              <input class="form-container--button" type="submit" value="Calculate" id="buttonCalculateDiscountCoupons"></input>
-              <button class="form-container--button" id="cleanContent" type="button">clear</button>
-            </div>
-            <div id="myModal" class="modal">
-              <div class="modal-content">
-                <span id="closeBanner" class="closeBanner" onclick="closeBanner()"></span>
-                <h1 class="modal-content--title">Cupones disponibles</h1>
-                <!-- <div class="modal-content--coupon"> -->
-                <p class="modal-content--coupons">BUMR09</p>
-                <p class="modal-content--coupons">BUMR08</p>
-                <p class="modal-content--coupons">BUMR07</p>
-                <!-- </div> -->
+              <div class="inputBox">
+                <input id="couponsInputDiscount" type="number" required="required">
+                <span>Descuento:</span>
               </div>
-            </div>
-          </form>
+              <div class="form-container__coupons">
+                <label for="selectCoupons">Cupon:</label>
+                <select name="selectCoupons" name="selectCoupons" id="selectCoupons">
+                  <option value="0">------</option>
+                  <option value="10">-10%</option>
+                  <option value="25">-25%</option>
+                  <option value="50">-50%</option>
+                </select>
+                <div id="input" class="form-container__coupons--input">
+                  <input id="inputCoupons" onkeyup="mayus(this)" type="text" placeholder="Cupones" required="required" disabled>
+                  <button class="form-container--btnShowCoupons" id="showCoupons"></button>
+                </div>
+              </div>
+              <div class="form-container--couponsButton">
+                <!-- <input class="form-container--button" type="submit" value="Calculate" id="buttonCalculateDiscountCoupons"></input> -->
+                <button class="form-container--button" id="buttonCalculateDiscountCoupons" type="Calculate">Calcular</button>
+                <button class="form-container--button_clear" id="cleanContent" type="button">Limpiar</button>
+              </div>
+              <div id="myModal" class="modal">
+                <div class="modal-content">
+                  <span id="closeBanner" class="closeBanner" onclick="closeBanner()">x</span>
+                  <h1 class="modal-content--title">Cupones disponibles</h1>
+                  <!-- <div class="modal-content--coupon"> -->
+                    <p class="modal-content--coupons">BUXl0110</p>
+                    <p class="modal-content--coupons">XEZV1100</p>
+                  <p class="modal-content--coupons">BMJS0101</p>
+                  <!-- </div> -->
+                </div>
+              </div>
+            </form>
+          </div>
+          <div id="form-container" class="card-container-product">
+            <article class="card-container-product__item">
+              <div class="card-container-product__item--p1">
+                <h4 class="card-container-product__item--title">Poduct</h4>
+                <h4 id="percentDiscount">-00%</h4>
+              </div>
+              <div class="card-container-product__item--container-image">
+                <figure><img src="./assets/smartwacth.png" alt=""></figure>
+              </div>
+              <div class="card-container-product__item--p2">
+                <h4 id="originalPrice" style="text-decoration:line-through">$0000</h4>
+                <h4 id="priceDiscount">$0000</h4>
+              </div>
+            </article>
+            <p id="youSaveTheAmountOf" class="saving_amount"></p>
         </div>
-        <section id="form-container" class="card-container-product">
-          <article class="card-container-product__item">
-            <div class="card-container-product__item--p1">
-              <h4 class="card-container-product__item--title">Poduct</h4>
-              <h4 id="percentDiscount">-00%</h4>
-            </div>
-            <div class="card-container-product__item--container-image">
-              <figure><img src="./assets/smartwacth.png" alt=""></figure>
-            </div>
-            <div class="card-container-product__item--p2">
-              <h4 id="originalPrice" style="text-decoration:line-through">$0000</h4>
-              <h4 id="priceDiscount">$0000</h4>
-            </div>
-          </article>
-          <p id="youSaveTheAmountOf"></p>
-        </section>
-        <span id="close" class="close" onclick="close()"></span>
+        <span id="close" class="close" onclick="close()">x</span>
       </div>
     </div>
-
   </main>
 
   <footer>
-    <p>Copyright © 2021. <strong style="color:rgb(22, 23, 26)">Bruno Maldonado. </strong>All rights reserved.</p>
+    <p class="copyright">Copyright © 2021. <strong style="color:rgb(22, 23, 26)">Bruno Maldonado. </strong>All rights reserved.</p>
   </footer>
 
-  <script src="./js/jquery-3.6.0.min.js"></script>
   <script src="./js/main.js"></script>
 </body>
 
