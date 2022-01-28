@@ -432,8 +432,12 @@ input[type="number"]:focus {
 }
 
 .button_letter {
-  padding-top: 3px;
-
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 8px;
+  left: 31px;
+  /* padding-top: 3px; */
+  /* padding-right: 40px; */
 }
 
 .form-container--sideLeft {

@@ -57,10 +57,8 @@
               <p class="form-container--result" id="squarePerimeter"></p>
             </div>
             <div class="form-container--right">
-              <input class="form-container--button" id="area" type="submit" value="Calcular Area"
-                onclick="calculateAreaSquare()"></input>
-              <input class="form-container--button" id="perimeter" type="submit" value="Perimetro"
-                onclick="calculatePerimeterSquare()"></input>
+              <button class="form-container--button" id="area" type="button" onclick="calculateAreaSquare()">Calcular Area</button>
+              <button class="form-container--button" id="perimeter" type="button" onclick="calculatePerimeterSquare()">Perimetro</button>
               <button class="form-container--button" id="reset" type="button" onclick="resetAll()">Limpiar</button>
             </div>
           </div>
@@ -98,10 +96,8 @@
                 <p class="form-container--result" id="triangleHeight"></p>
               </div>
               <div id="triangleButtons" class="form-container--right">
-                <input class="form-container--button" id="perimeter" type="submit" value="Perimeter"
-                  onclick="calculatePerimeterTriangle()"></input>
-                <input class="form-container--button" id="height" type="submit" value="Height"
-                  onclick="calculateHeightTriangle()"></input>
+                <button class="form-container--button" id="perimeter" type="button" onclick="calculatePerimeterTriangle()">Perimeter</button>
+                <button class="form-container--button" id="height" type="button" onclick="calculateHeightTriangle()">Height</button>
                 <button class="form-container--button" id="area" type="button"
                   onclick="buttonTriangleArea('box-triangleArea')"><img class="button_letter"
                     src="./assets/amazon-16.png" alt=""><span>rea</span></button>
@@ -174,14 +170,10 @@
                 </div>
               </div>
               <div class="form-container--right">
-                <input class="form-container--button" id="area" type="submit" value="Area"
-                  onclick="calculateAreaCircle()"></input>
-                <input class="form-container--button" id="perimeter" type="submit" value="Perimeter"
-                  onclick="calculatePerimeterCircle()"></input>
-                <input class="form-container--button" id="diameter" type="submit" value="Diameter"
-                  onclick="calculateDiameterCircle()"></input>
-                <button class="form-container--button" id="circumference" type="button"
-                  onclick="buttonCircumference('box-Circumference')">Circumference</button>
+                <button class="form-container--button" id="area" type="button" onclick="calculateAreaCircle()">Area</button>
+                <button class="form-container--button" id="perimeter" type="button" onclick="calculatePerimeterCircle()">Perimeter</button>
+                <button class="form-container--button" id="diameter" type="button" onclick="calculateDiameterCircle()">Diameter</button>
+                <button class="form-container--button" id="circumference" type="button" onclick="buttonCircumference('box-Circumference')">Circumference</button>
                 <button class="form-container--button" id="reset" type="button" onclick="resetAll()">Reset</button>
               </div>
             </div>
@@ -197,12 +189,9 @@
                 <p class="form-container--result" id="circleRadio"></p>
               </div>
               <div class="form-container--right">
-                <input class="form-container--button" id="SecondArea" type="submit" value="Calculate Area"
-                  onclick="calculateSecondAreaCircle()"></input>
-                <input class="form-container--button" id="SecondPerimeter" type="submit" value="Perimeter"
-                  onclick="calculateSecondPerimeterCircle()"></input>
-                <input class="form-container--button" id="circleRadio" type="submit" value="Radio"
-                  onclick="calculateRadioCircle()"></input>
+                <button class="form-container--button" id="SecondArea" type="button" onclick="calculateSecondAreaCircle()">Calculate Area</button>
+                <button class="form-container--button" id="SecondPerimeter" type="button" onclick="calculateSecondPerimeterCircle()">Perimeter</button>
+                <button class="form-container--button" id="circleRadio" type="button" onclick="calculateRadioCircle()">Radio</button>
                 <button class="form-container--button" type="button" onclick="resetAll()">Reset</button>
                 <button class="form-container--button__return" type="button" onclick="toReturn('triangleCard')">
                   <div class="arrow">

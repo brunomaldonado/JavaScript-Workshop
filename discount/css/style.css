@@ -590,7 +590,7 @@ input[type="text"]:focus {
   background-color: rgb(245, 8, 8);
   color: #fff;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   padding-left: 1px;
   border-radius: 50%;
   cursor: pointer;
@@ -652,7 +652,7 @@ input[type="text"]:focus {
   color: #fff;
   text-align: center;
   padding-left: 1px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   border-radius: 50%;
   cursor: pointer;
 }

@@ -107,50 +107,6 @@ main {
   right: 3%;
 }
 
-/* input[type="number"] {
-  font-size: 1.9rem;
-  font-weight: bold;
-  padding: 4px;
-  transition: .3s all;
-}
-
-input[type="text"] {
-  border: 2px solid rgb(231, 223, 207);
-  border-radius: 10px;
-  outline: none;
-  background-color: inherit;
-  color: rgb(14, 14, 14);
-  font-size: 1.6rem;
-  font-weight: bold;
-  padding: 6px;
-  transition: .3s all;
-}
-
-.form-container .inputBox span {
-  font-size: 1.8rem;
-}
-
-.form-container .inputBox input:focus~span,
-.form-container .inputBox input:valid~span {
-  text-align: right;
-  font-size: 1.6rem;
-  color: rgb(58, 59, 59);
-  background-color: transparent;
-}
-
-.form-container .form-container--button {
-  padding: 6px;
-  width: 90px;
-  font-size: 1.5rem;
-}
-
-.totalPrice {
-  width: 180px;
-  height: 64px;
-  margin: 10px 0px 30px 0px;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-} */
-
 .totalPrice span {
   font-size: 1.5rem;
   padding: 3px;
@@ -240,6 +196,14 @@ input[type="text"] {
 
 .card-container-product__item--p2 h4:nth-child(1) {
   color: #919191;
+}
+
+.close {
+  font-size: 1.6rem;
+}
+
+.closeBanner {
+  font-size: 1.2rem;
 }
 
 footer {

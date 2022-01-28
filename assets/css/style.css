@@ -200,21 +200,6 @@ header nav .nav-menu.active {
   animation: showMenu 350ms ease-in-out both;
 }
 
-header nav button .br-1.animation {
-  transform: rotate(-45deg) translate(-7px, -7px);
-  background-color: red;
-  border-radius: 1.5em;
-}
-
-header nav button .br-2.animation {
-  opacity: 0;
-}
-
-header nav button .br-3.animation {
-  transform: rotate(45deg) translate(-7px, -7px);
-  border-radius: 1.5em;
-}
-
 main {
   padding-top: 50px;
   margin-bottom: 50px;
@@ -253,19 +238,19 @@ main {
 }
 
 .main-container--card .triangle {
-  background-image: url(../assets/triangleone.svg);
+  background-image: url(../triangleone.svg);
 }
 .main-container--card .square {
-  background-image: url(../assets/cubo.svg);
+  background-image: url(../cubo.svg);
 }
 .main-container--card .circle {
-  background-image: url(../assets/dragoncircle.svg);
+  background-image: url(../dragoncircle.svg);
 }
 .main-container--card .discount {
-  background-image: url(../assets/discount.png);
+  background-image: url(../discount.png);
 }
 .main-container--card .histogram {
-  background-image: url(../assets/histogram.png);
+  background-image: url(../histogram.png);
 }
 
 .container--card-title {
